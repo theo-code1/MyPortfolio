@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-blue: #0039E3;
+  --color-dark-blue: #231F33;
+  --color-silver: #C0C0C0;
+}
+
+/* body {
+  font-family: 'clash-display', sans-serif;
+} */
+
+@font-face {
+  font-family: 'clash-display';
+  src: url('./assets/fonts/ClashDisplay-Medium.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'switzer';
+  src: url('./assets/fonts/Switzer-Medium.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer utilities {
+  .font-clash-display {
+    font-family: 'clash-display', sans-serif;
+  }
+  .font-switzer {
+    font-family: 'switzer', sans-serif;
+  }
+}
