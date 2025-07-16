@@ -16,7 +16,7 @@ import useScrollDirection from './hook/UseScrollDirection';
 
   return (
     // <nav className={`flex-1/2 items-center justify-between px-20 mt-6`}>
-    <nav className={`flex items-center justify-between px-20 fixed top-0 left-0 w-full z-50 transition-all duration-300 
+    <nav className={`flex items-center justify-between px-20 fixed top-0 left-0 w-full z-50 transition-all duration-400 animate-nav
         ${scrollDirection === 'down' ? '-translate-y-32' : 'translate-y-0'}
         ${isScrolled ? 'pt-3 pb-2' : 'pt-6'} `}>
         <div className={`logo items-center ${isScrolled ? 'hidden' : 'flex'}`}>
