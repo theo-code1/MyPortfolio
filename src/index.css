@@ -5,6 +5,8 @@
   --color-dark-blue: #231F33;
   --color-silver: #C0C0C0;
   --color-shadow-black: #0000001a;
+  --color-shadow-black-2: rgba(0, 0, 0, 0.5);
+  --color-shadow-black-02: rgba(0, 0, 0, 0.2);
 }
 
 /* body {
@@ -62,6 +64,21 @@
     animation-delay: 4s;
     filter: blur(80px);
   }
+  .animate-scroll-left {
+  animation: scroll-left 20s linear infinite;
+}
+.loop-item1{
+  animation-delay: calc(10s / 4 * (4 - 1) * -1);
+}
+.loop-item2{
+  animation-delay: calc(10s / 4 * (4 - 2) * -1);
+}
+.loop-item3{
+  animation-delay: calc(10s / 4 * (4 - 3) * -1);
+}
+.loop-item4 {
+  animation-delay: calc(10s / 4 * (4 - 4) * -1);
+}
 }
 
  .animated-spans{
@@ -134,3 +151,11 @@
     opacity: 1;
   }
 }
+
+@keyframes scroll-left {
+  to {
+    left: -100%;
+    /* transform: translateX(-100%); */
+  }
+}
+
