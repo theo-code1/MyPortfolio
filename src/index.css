@@ -4,6 +4,7 @@
   --color-primary-blue: #0039e3;
   --color-dark-blue: #231f33;
   --color-silver: #c0c0c0;
+  --color-primary-green: #0ef595;
   --color-github-color: #293032;
   --color-shadow-black: #0000001a;
   --color-shadow-black-2: rgba(0, 0, 0, 0.5);
@@ -176,3 +177,4 @@
   );
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
+
