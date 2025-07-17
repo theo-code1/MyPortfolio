@@ -7,6 +7,7 @@
   --color-primary-green: #0ef595;
   --color-github-color: #293032;
   --color-shadow-black: #0000001a;
+  --color-blue-background: rgba(0, 57, 227, 0.3);
   --color-shadow-black-2: rgba(0, 0, 0, 0.5);
   --color-shadow-black-02: rgba(0, 0, 0, 0.2);
 }
@@ -42,7 +43,7 @@
     transform: translate(120px);
   }
   .animate-poop {
-    animation: AnimatePoop 1.7s ease-in-out forwards;
+    animation: AnimatePoop 1.3s ease-in-out forwards;
     animation-delay: 2s;
     opacity: 0;
     transform: translateY(40px);
