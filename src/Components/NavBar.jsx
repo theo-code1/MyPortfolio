@@ -31,7 +31,7 @@ import useScrollDirection from './hook/UseScrollDirection';
             <li><a className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>Contact</a></li>
         </ul>
 
-        <button type="button" className={`bg-primary-blue brightness-105 shadow-[0_4px_20px_0_var(--color-shadow-black)] px-8 py-3 rounded-xl text-[16px] text-white font-switzer font-medium ${isScrolled ? 'hidden' : 'flex'}`}>Let's Connect</button>
+        <button type="button" className={`bg-primary-blue brightness-105 shadow-[0_4px_10px_0_var(--color-shadow-black)] hover:shadow-[0_2px_10px_0_var(--color-shadow-black-02)] transition-all duration-200 px-8 py-3 rounded-xl text-[16px] text-white font-switzer font-medium cursor-pointer ${isScrolled ? 'hidden' : 'flex'}`}>Let's Connect</button>
     </nav>
   )
 }

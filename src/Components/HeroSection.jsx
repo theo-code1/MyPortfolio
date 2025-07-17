@@ -1,3 +1,4 @@
+// import React, { useEffect, useState } from 'react'
 import GridBackground from '../assets/GridBackground'
 import NavBar from './NavBar'
 import SeeArrow from '../assets/Icons/SeeArrow'
@@ -5,10 +6,32 @@ import GoArrow from '../assets/Icons/GoArrow'
 import trust1 from '../assets/trust1.webp'
 import trust2 from '../assets/trust2.webp'
 import trust3 from '../assets/trust3.webp'
+import Project1 from '../assets/project01.webp'
+import Project2 from '../assets/project02.webp'
+import Project3 from '../assets/project03.webp'
+import Project4 from '../assets/project04.webp'
+import Carousel from './Carousel'
 
 const HeroSection = () => {
+
+  // const [currentIndex, setCurrentIndex] = useState(0)
+  // const images = [
+  //   "../assets/project01.webp",
+  //   "../assets/project02.webp",
+  //   "../assets/project03.webp",
+  //   "../assets/project04.webp",
+  // ]
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+  //   }, 2000)
+
+  //   return () => clearInterval(interval)
+  // }, [])
+
   return (
-    <section className='h-[200dvh] pt-24'>
+    <section className='h-[200dvh] pt-24 max-w-screen overflow-x-hidden'>
         <GridBackground className='absolute top-0 left-1/2 -translate-x-1/2 w-fit -z-10 animate-opacity'/>
         <NavBar />
 
@@ -18,9 +41,9 @@ const HeroSection = () => {
             <h3 className='text-xl font-switzer text-dark-blue mb-8 animate-poop' style={{"--delay": 9}}>Never miss a note, an idea, or a connection again—stay organized, inspired,<br />and effortlessly connected every step of the way.</h3>
             <div className="cta-buttons flex items-center gap-6 mx-auto animate-position-opacity">
                 <button type="button" className='flex items-center gap-2 px-8 py-4 bg-white border-2 border-black rounded-xl font-switzer font-medium text-lg hover:shadow-[0_2px_20px_0_var(--color-shadow-black)] cursor-pointer transition-all duration-200 group'>See Projects <SeeArrow className='text-2xl group-hover:translate-x-2  transition-all duration-200' /></button>
-                <button type="button" className='flex items-center gap-2 px-8 py-4 bg-primary-blue text-white rounded-xl font-switzer font-medium text-lg hover:brightness-90 active:brightness-60 transition-all duration-200 cursor-pointer group'>Start Your Project <GoArrow className='text-2xl group-hover:translate-x-2 group-hover:-translate-y-1 group-hover:scale-[1.1] transition-all duration-200'/></button>
+                <button type="button" className='flex items-center gap-2 px-8 py-4 bg-primary-blue text-white rounded-xl font-switzer font-medium text-lg hover:brightness-95 active:brightness-80 transition-all duration-200 cursor-pointer group'>Start Your Project <GoArrow className='text-2xl group-hover:translate-x-2 group-hover:-translate-y-1 group-hover:scale-[1.1] transition-all duration-200'/></button>
             </div>
-            <div className="trust flex gap-4 items-center mx-auto animate-blur ">
+            <div className="trust flex gap-4 items-center mx-auto animate-blur mb-24">
               <h3 className='text-lg text-dark-blue font-medium'>Trusted by</h3>
               <div className="people-trusted flex gap-0 w-fit">
                 <img src={trust1} alt="person One" draggable='false' className='size-10 select-none' />
@@ -29,6 +52,13 @@ const HeroSection = () => {
               </div>
             </div>
         </div>
+            {/* <div className="projects-slide flex gap-8 w-[90dvw] mx-auto border relative">
+              <img src={Project3} alt="Project 03" style={{"--loop-delay": 1}} className='w-[30dvw] rounded-lg shadow-[0_4px_20px_0_var(--color-shadow-black-02)]' />
+              <img src={Project1} alt="Project 01" style={{"--loop-delay": 2}} className='w-[30dvw] rounded-lg shadow-[0_4px_20px_0_var(--color-shadow-black-02)]' />
+              <img src={Project2} alt="Project 02" style={{"--loop-delay": 3}} className='w-[30dvw] rounded-lg shadow-[0_4px_20px_0_var(--color-shadow-black-02)]' />
+              <img src={Project4} alt="Project 04" style={{"--loop-delay": 4}} className='w-[30dvw] rounded-lg shadow-[0_4px_20px_0_var(--color-shadow-black-02)]' />
+            </div> */}
+        <Carousel />
 
     </section>
   )

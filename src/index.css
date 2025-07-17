@@ -1,90 +1,93 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-blue: #0039E3;
-  --color-dark-blue: #231F33;
-  --color-silver: #C0C0C0;
+  --color-primary-blue: #0039e3;
+  --color-dark-blue: #231f33;
+  --color-silver: #c0c0c0;
   --color-shadow-black: #0000001a;
   --color-shadow-black-2: rgba(0, 0, 0, 0.5);
   --color-shadow-black-02: rgba(0, 0, 0, 0.2);
 }
 
 /* body {
-  font-family: 'clash-display', sans-serif;
+  font-family: 'switzer', sans-serif;
 } */
 
 @font-face {
-  font-family: 'clash-display';
-  src: url('./assets/fonts/ClashDisplay-Medium.otf') format('opentype');
+  font-family: "clash-display";
+  src: url("./assets/fonts/ClashDisplay-Medium.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'switzer';
-  src: url('./assets/fonts/Switzer-Medium.otf') format('opentype');
+  font-family: "switzer";
+  src: url("./assets/fonts/Switzer-Medium.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @layer utilities {
   .font-clash-display {
-    font-family: 'clash-display', sans-serif;
+    font-family: "clash-display", sans-serif;
   }
   .font-switzer {
-    font-family: 'switzer', sans-serif;
+    font-family: "switzer", sans-serif;
   }
-  .animate-fadeLoad{
-    animation: fadeAnimate 2s  ease-in-out  forwards ;
-    animation-delay: calc(var(--delay) *0.05s);
+  .animate-fadeLoad {
+    animation: fadeAnimate 2s ease-in-out forwards;
+    animation-delay: calc(var(--delay) * 0.05s);
     transform: translate(120px);
   }
-  .animate-poop{
+  .animate-poop {
     animation: AnimatePoop 2s ease-in-out forwards;
     animation-delay: 2s;
     opacity: 0;
     transform: translateY(40px);
   }
-  .animate-nav{
+  .animate-nav {
     animation: AnimateNav 1s ease-in-out forwards;
     animation-delay: 4s;
     transform: translateY(-120px);
   }
-  .animate-opacity{
+  .animate-opacity {
     animation: AnimateOpacity 2s ease-in-out forwards;
   }
-  .animate-position-opacity{
+  .animate-position-opacity {
     animation: AnimatePositioOpacity 1s ease-in-out forwards;
     animation-delay: 3s;
     opacity: 0;
     transform: translateY(40px);
   }
-  .animate-blur{
+  .animate-blur {
     animation: AnimateBlur 1s ease-in-out forwards;
     animation-delay: 4s;
     filter: blur(80px);
   }
-  .animate-scroll-left {
-  animation: scroll-left 20s linear infinite;
-}
-.loop-item1{
-  animation-delay: calc(10s / 4 * (4 - 1) * -1);
+  .animate-infinite-scroll {
+    animation: infiniteScroll 40s linear infinite
+  }
+  /* .animate-scroll-left {
+    animation: scroll-left 10s linear infinite;
+} */
+  /* .loop-item1{
+  animation-delay: calc(20s / 4 * (4 - 1) * -1);
 }
 .loop-item2{
-  animation-delay: calc(10s / 4 * (4 - 2) * -1);
+  animation-delay: calc(20s / 4 * (4 - 2) * -1);
 }
 .loop-item3{
-  animation-delay: calc(10s / 4 * (4 - 3) * -1);
+  animation-delay: calc(20s / 4 * (4 - 3) * -1);
 }
 .loop-item4 {
-  animation-delay: calc(10s / 4 * (4 - 4) * -1);
-}
+  animation-delay: calc(20s / 4 * (4 - 4) * -1);
+}  */
 }
 
- .animated-spans{
-   opacity: 0;
-   transform: translateY(24px);
-   filter: blur(40px);
+.animated-spans {
+  opacity: 0;
+  transform: translateY(24px);
+  filter: blur(40px);
 }
 @keyframes fadeAnimate {
   0% {
@@ -92,7 +95,7 @@
     filter: blur(40px);
     transform: translateY(24px);
   }
-  75%{
+  75% {
     transform: translateY(24px);
   }
   100% {
@@ -102,60 +105,72 @@
   }
 }
 
-@keyframes AnimatePoop{
-  from{
+@keyframes AnimatePoop {
+  from {
     opacity: 0;
     transform: translateY(40px);
   }
-  to{
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
 @keyframes AnimateNav {
-  0%{
+  0% {
     transform: translateY(-120px);
   }
-  100%{
+  100% {
     transform: translateY(0);
   }
-  
 }
 @keyframes AnimateOpacity {
-  from{
+  from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
 @keyframes AnimatePositioOpacity {
-  from{
+  from {
     opacity: 0;
     transform: translateY(80px);
   }
-  to{
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@keyframes AnimateBlur{
-  from{
+@keyframes AnimateBlur {
+  from {
     filter: blur(40px);
     opacity: 0;
   }
-  to{
+  to {
     filter: blur(0);
     opacity: 1;
   }
 }
 
-@keyframes scroll-left {
-  to {
-    left: -100%;
-    /* transform: translateX(-100%); */
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(0);
   }
-}
+  to {
+    transform: translateX(-50%);
+  }
+} 
 
+.projects-slide {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
