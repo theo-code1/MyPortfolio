@@ -4,6 +4,7 @@
   --color-primary-blue: #0039e3;
   --color-dark-blue: #231f33;
   --color-silver: #c0c0c0;
+  --color-github-color: #293032;
   --color-shadow-black: #0000001a;
   --color-shadow-black-2: rgba(0, 0, 0, 0.5);
   --color-shadow-black-02: rgba(0, 0, 0, 0.2);
@@ -52,6 +53,7 @@
   }
   .animate-opacity {
     animation: AnimateOpacity 2s ease-in-out forwards;
+    animation-delay: var(--animDelay);
   }
   .animate-position-opacity {
     animation: AnimatePositioOpacity 1s ease-in-out forwards;
@@ -65,7 +67,7 @@
     filter: blur(80px);
   }
   .animate-infinite-scroll {
-    animation: infiniteScroll 40s linear infinite
+    animation: infiniteScroll 50s linear infinite
   }
   /* .animate-scroll-left {
     animation: scroll-left 10s linear infinite;

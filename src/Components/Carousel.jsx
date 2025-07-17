@@ -16,16 +16,17 @@ const ImageCarousel = () => {
 
   return (
     <div
-      className="w-full overflow-hidden"
+      className="w-full overflow-hidden opacity-0 animate-opacity [animation-delay: 4s] transition-all duration-200"
       style={{
-        maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-        WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+        '--animDelay': '4s',
+        maskImage: "linear-gradient(to right, transparent, white 5%, white 90%, transparent)",
+        WebkitMaskImage: "linear-gradient(to right, transparent, white 5%, white 90%, transparent)",
       }}
     >
-      <div className="flex w-max animate-infinite-scroll hover:[animation-play-state:paused]">
+      <div className="flex w-max animate-infinite-scroll hover:[animation-duration: 100]">
         {imageList.map((image, index) => (
           <div key={index} className="px-4 py-8">
-            <div className="relative group w-[30dvw] h-auto rounded-lg overflow-hidden shadow-lg transform-gpu transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+            <div className="relative group w-[30dvw] h-auto rounded-lg overflow-hidden shadow-[0_4px_20px_0_var(--color-shadow-black-02)] transition-all duration-300 ">
               <img
                 src={image.src}
                 alt={image.alt}
@@ -33,7 +34,6 @@ const ImageCarousel = () => {
                 height={400}
                 className="transition-opacity opacity-100 duration-100"
               />
-              <div className="absolute inset-0 bg-black/5 group-hover:bg-black/20 transition-all duration-300" />
             </div>
           </div>
         ))}
