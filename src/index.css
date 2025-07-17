@@ -41,7 +41,7 @@
     transform: translate(120px);
   }
   .animate-poop {
-    animation: AnimatePoop 2s ease-in-out forwards;
+    animation: AnimatePoop 1.7s ease-in-out forwards;
     animation-delay: 2s;
     opacity: 0;
     transform: translateY(40px);
