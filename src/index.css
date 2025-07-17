@@ -4,10 +4,11 @@
   --color-primary-blue: #0039e3;
   --color-dark-blue: #231f33;
   --color-silver: #c0c0c0;
+  --color-silver-background: rgba(192, 192, 192, 0.3);
   --color-primary-green: #0ef595;
   --color-github-color: #293032;
   --color-shadow-black: #0000001a;
-  --color-blue-background: rgba(0, 57, 227, 0.3);
+  --color-blue-background: rgba(0, 57, 227, 0.2);
   --color-shadow-black-2: rgba(0, 0, 0, 0.5);
   --color-shadow-black-02: rgba(0, 0, 0, 0.2);
 }
