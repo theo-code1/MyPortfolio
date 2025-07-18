@@ -12,7 +12,7 @@ const variants = {
 
 const AboutSection = ({ aboutRef }) => {
   return (
-    <section ref={aboutRef} id='About-section' className='h-screen max-w-screen font-switzer flex items-center justify-between px-48 mt-12 mb-16 overflow-x-hidden '>
+    <section ref={aboutRef} id='About-section' className='h-screen max-w-screen font-switzer flex items-center justify-between pl-48 pr-40 mt-12 mb-16 overflow-x-hidden '>
         <div className="content-side w-[52%] flex flex-col gap-8  ">
             <motion.div
                 variants={variants}
@@ -23,7 +23,7 @@ const AboutSection = ({ aboutRef }) => {
 
             <div className="online w-fit flex items-center gap-2 px-4 py-1 bg-white border-2 border-black/30 rounded-full ">
                 <div className="dot bg-primary-green size-2.5 rounded-full"></div>
-                <h3 className='text-lg text-black font-medium'>available for projets</h3>
+                <h3 className='text-lg text-black font-medium'>available for projects</h3>
             </div>
                 </motion.div>
             <motion.div
@@ -70,8 +70,8 @@ const AboutSection = ({ aboutRef }) => {
                 viewport={{ once: true }}
                 >
         <div className="img-side w-fit relative">
-            <img src={ProfileImg} alt="Profile Image" className="w-112 h-100 object-cover rounded-2xl outline-4  outline-white " />
-            <div className="behine-layer absolute top-0 left-0 rounded-2xl rotate-4 w-full h-full bg-primary-blue/40 -z-10 shadow-2xl"></div>
+            <img src={ProfileImg} alt="Profile Image" className="w-128 h-120 object-cover rounded-2xl outline-4  outline-white select-none" draggable='false' />
+            <div className="behind-layer absolute top-0 left-0 rounded-2xl rotate-4 w-full h-full bg-primary-blue/40 -z-10 shadow-2xl"></div>
         </div>
                 </motion.div>
     </section>

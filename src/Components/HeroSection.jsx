@@ -29,7 +29,7 @@ const HeroSection = ({ overviewRef, aboutRef, workRef }) => {
                 className="text-6xl text-center font-clash-display font-bold"
                 />
               <BlurText
-                text="let me get it into reality"
+                text="let me turn it into Website"
                 delay={150}
                 animateBy="words"
                 direction="top"
