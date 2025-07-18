@@ -24,7 +24,7 @@ import useScrollDirection from './hook/UseScrollDirection';
             <h1 className='text-2xl font-switzer font-medium '>TheoKode</h1>
         </div>
 
-        <ul className={`bg-white px-8 py-3 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-black)] border border-black/10 flex items-center gap-16 text-[16px] font-switzer font-medium ${isScrolled ? 'mx-auto' : ''}`}>
+        <ul className={`px-8 py-3 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-black)] border border-black/10 flex items-center gap-16 text-[16px] font-switzer font-medium ${isScrolled ? 'mx-auto bg-white/50 backdrop-blur-sm' : 'bg-white'}`}>
             <li><a href='#hero-section' className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>Overview</a></li>
             <li><a href='#About-section' className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>About</a></li>
             <li><a href='#work-section' className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>Work</a></li>
