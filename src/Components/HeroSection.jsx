@@ -9,12 +9,12 @@ import trust3 from '../assets/trust3.webp'
 import Carousel from './Carousel'
 import GithubIcon from "../assets/Icons/Github";
 
-const HeroSection = () => {
+const HeroSection = ({ overviewRef, aboutRef, workRef }) => {
 
   return (
-    <section id="hero-section" className='h-max pt-24 pb-12 max-w-screen overflow-x-hidden'>
+    <section id="Overview" ref={overviewRef} className='h-max pt-24 pb-12 max-w-screen overflow-x-hidden'>
         <GridBackground className='absolute top-0 left-1/2 -translate-x-1/2 w-fit -z-10 animate-opacity'/>
-        <NavBar />
+        <NavBar overviewRef={overviewRef} aboutRef={aboutRef} workRef={workRef} />
 
         <div className="cta-content flex flex-col gap-6 text-center w-fit mx-auto mt-24">
             {/* <h1 className='hero-headline text-6xl text-center font-clash-display font-bold '><span className='animated-spans animate-fadeLoad' style={{"--delay": 1}}>Think,</span><span className='animated-spans animate-fadeLoad' style={{"--delay": 2}}>Plan</span><br/><span className='animated-spans animate-fadeLoad' style={{"--delay": 3}}>let</span> <span className='animated-spans animate-fadeLoad' style={{"--delay": 4}}>me</span> <span className='animated-spans animate-fadeLoad' style={{"--delay": 5}}>get</span> <span className='animated-spans animate-fadeLoad' style={{"--delay": 6}}>it</span> <span className='animated-spans animate-fadeLoad' style={{"--delay": 7}}>into</span> <span className='animated-spans animate-fadeLoad' style={{"--delay": 8}}>reality</span></h1> */}
@@ -40,7 +40,7 @@ const HeroSection = () => {
               </div>
               <h3 className='text-xl font-switzer text-dark-blue mb-8 animate-poop' style={{"--delay": 7}}>Never miss a note, an idea, or a connection again—stay organized, inspired,<br />and effortlessly connected every step of the way.</h3>
               <div className="cta-buttons flex items-center gap-6 mx-auto animate-position-opacity">
-                  <a href="#" className='flex items-center gap-2 px-8 py-4 bg-white border-2 border-black rounded-xl font-switzer font-medium text-lg hover:shadow-[0_2px_20px_0_var(--color-shadow-black)] cursor-pointer transition-all duration-200 group'>See Projects <SeeArrow className='text-2xl group-hover:translate-x-2  transition-all duration-200' /></a>
+                  <a href="#" className='flex items-center gap-2 px-8 py-4 bg-white border-[1.5px] border-black rounded-xl font-switzer font-medium text-lg hover:shadow-[0_2px_20px_0_var(--color-shadow-black)] cursor-pointer transition-all duration-200 group'>See Projects <SeeArrow className='text-2xl group-hover:translate-x-2  transition-all duration-200' /></a>
                   <a href="#" className='flex items-center gap-2 px-8 py-4 bg-primary-blue text-white rounded-xl font-switzer font-medium text-lg hover:brightness-95 active:brightness-80 transition-all duration-200 cursor-pointer group'>Start Your Project <GoArrow className='text-2xl group-hover:translate-x-2 group-hover:-translate-y-1 group-hover:scale-[1.1] transition-all duration-200'/></a>
               </div>
               <div className="trust flex gap-4 items-center mx-auto animate-blur mb-24">

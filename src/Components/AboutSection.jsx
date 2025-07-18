@@ -10,9 +10,9 @@ const variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7 } }
 };
 
-const AboutSection = () => {
+const AboutSection = ({ aboutRef }) => {
   return (
-    <section id='About-section' className='h-screen max-w-screen font-switzer flex items-center justify-between px-48 mt-12 mb-16 overflow-x-hidden '>
+    <section ref={aboutRef} id='About-section' className='h-screen max-w-screen font-switzer flex items-center justify-between px-48 mt-12 mb-16 overflow-x-hidden '>
         <div className="content-side w-[52%] flex flex-col gap-8  ">
             <motion.div
                 variants={variants}

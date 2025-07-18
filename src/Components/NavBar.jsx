@@ -2,7 +2,7 @@ import MyLogo from '../assets/MyLogo.webp'
 import { useState, useEffect } from 'react';
 import useScrollDirection from './hook/UseScrollDirection';
 
-    const NavBar = () => {
+    const NavBar = ({ overviewRef, aboutRef, workRef }) => {
   const scrollDirection = useScrollDirection();
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -13,6 +13,12 @@ import useScrollDirection from './hook/UseScrollDirection';
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+
+
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     // <nav className={`flex-1/2 items-center justify-between px-20 mt-6`}>
@@ -25,9 +31,9 @@ import useScrollDirection from './hook/UseScrollDirection';
         </div>
 
         <ul className={`px-8 py-3 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-black)] border border-black/10 flex items-center gap-16 text-[16px] font-switzer font-medium ${isScrolled ? 'mx-auto bg-white/50 backdrop-blur-sm' : 'bg-white'}`}>
-            <li><a href='#hero-section' className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>Overview</a></li>
-            <li><a href='#About-section' className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>About</a></li>
-            <li><a href='#work-section' className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>Work</a></li>
+            <li onClick={() => scrollToSection(overviewRef)}><a  className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Overview</a></li>
+            <li onClick={() => scrollToSection(aboutRef)}><a  className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>About</a></li>
+            <li onClick={() => scrollToSection(workRef)}><a  className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>Work</a></li>
             <li><a className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>Contact</a></li>
         </ul>
 
