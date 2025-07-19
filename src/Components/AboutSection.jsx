@@ -12,7 +12,7 @@ const variants = {
 
 const AboutSection = ({ aboutRef }) => {
   return (
-    <section ref={aboutRef} id='About-section' className='h-screen max-w-screen font-switzer flex items-center justify-between pl-48 pr-40 mt-12 mb-16 overflow-x-hidden '>
+    <section ref={aboutRef} id='about' className='h-screen max-w-screen font-switzer flex items-center justify-between pl-48 pr-40 mt-12 mb-16 overflow-x-hidden '>
         <div className="content-side w-[52%] flex flex-col gap-8  ">
             <motion.div
                 variants={variants}

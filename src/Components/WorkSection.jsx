@@ -44,7 +44,7 @@ const WorkSection = ({ workRef }) => {
   return (
     <section
       ref={workRef}
-      id="work-section"
+      id="work"
       className="min-h-[200dvh] max-w-screen flex flex-col gap-16 bg-black overflow-x-hidden relative px-42 py-24 font-switzer "
     >
       {/* <motion.div
@@ -98,9 +98,6 @@ const WorkSection = ({ workRef }) => {
       </div>
 
       <Link to={'/my-work'} className="text-xl text-white/90 flex items-center gap-2 hover:gap-4 px-8 py-4 rounded-xl brightness-110 bg-white/15 w-fit text-center mx-auto transition-all duration-200 " > 
-         See More <SeeArrow className='text-xl' />
-        </Link>
-      <Link to={'/contact'} className="text-xl text-white/90 flex items-center gap-2 hover:gap-4 px-8 py-4 rounded-xl brightness-110 bg-white/15 w-fit text-center mx-auto transition-all duration-200 " > 
          See More <SeeArrow className='text-xl' />
         </Link>
 

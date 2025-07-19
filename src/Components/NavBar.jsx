@@ -1,6 +1,7 @@
 import MyLogo from '../assets/MyLogo.webp'
 import { useState, useEffect } from 'react';
 import useScrollDirection from './hook/UseScrollDirection';
+import { Link } from 'react-router';
 
     const NavBar = ({ overviewRef, aboutRef, workRef }) => {
   const scrollDirection = useScrollDirection();
@@ -31,10 +32,10 @@ import useScrollDirection from './hook/UseScrollDirection';
         </div>
 
         <ul className={`px-8 py-3 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-black)] border border-black/10 flex items-center gap-16 text-[16px] font-switzer font-medium ${isScrolled ? 'mx-auto bg-white/50 backdrop-blur-sm' : 'bg-white'}`}>
-            <li onClick={() => scrollToSection(overviewRef)}><a  className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Overview</a></li>
-            <li onClick={() => scrollToSection(aboutRef)}><a  className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>About</a></li>
-            <li onClick={() => scrollToSection(workRef)}><a  className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>Work</a></li>
-            <li><a className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>Contact</a></li>
+            <li onClick={() => scrollToSection(overviewRef)}  className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Overview</li>
+            <li onClick={() => scrollToSection(aboutRef)}  className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>About</li>
+            <li onClick={() => scrollToSection(workRef)}  className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>Work</li>
+            <Link to={'/contact'} ><li className='cursor-pointer text-black hover:text-dark-blue px-2 py-1 transition-all duration-200'>Contact</li></Link>
         </ul>
 
         <button type="button" className={`bg-primary-blue brightness-105 hover:brightness-95 shadow-[0_4px_10px_0_var(--color-shadow-black)] hover:shadow-[0_2px_10px_0_var(--color-shadow-black-02)] transition-all duration-200 px-8 py-3 rounded-xl text-[16px] text-white font-switzer font-medium cursor-pointer ${isScrolled ? 'hidden' : 'flex'}`}>Let's Connect</button>

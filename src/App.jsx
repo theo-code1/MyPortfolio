@@ -28,7 +28,7 @@ const App = () => {
           }
         />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/my-work" element={<AllWorkSection />} />
+        <Route path="/my-work" element={<AllWorkSection />}  />
       </Routes>
     </BrowserRouter>
   )
