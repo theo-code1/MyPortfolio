@@ -6,7 +6,7 @@ import RightArrow from '../assets/Icons/RightArrow'
 import ProfileImg from '../assets/ProfileImg.webp'
 
 const variants = {
-  hidden: { opacity: 0, y: 60 },
+  hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7 } }
 };
 
@@ -45,10 +45,10 @@ const AboutSection = ({ aboutRef }) => {
                 viewport={{ once: true }}
                 >
             <ul className='space-y-2 text-lg text-black/75 font-medium mb-8'>
-                <li className={`flex items-center gap-3`}><CheckCircle className='text-2xl text-primary-green' />Modern React & JavaScript development</li>
-                <li className={`flex items-center gap-3`}><CheckCircle className='text-2xl text-primary-green' />Responsive design with Tailwind CSS</li>
-                <li className={`flex items-center gap-3`}><CheckCircle className='text-2xl text-primary-green' />Performance-optimized solutions</li>
-                <li className={`flex items-center gap-3`}><CheckCircle className='text-2xl text-primary-green' />Clean, maintainable code architecture</li>
+                <li className={`flex items-center gap-3`}><CheckCircle className='text-2xl text-primary-blue' />Modern React & JavaScript development</li>
+                <li className={`flex items-center gap-3`}><CheckCircle className='text-2xl text-primary-blue' />Responsive design with Tailwind CSS</li>
+                <li className={`flex items-center gap-3`}><CheckCircle className='text-2xl text-primary-blue' />Performance-optimized solutions</li>
+                <li className={`flex items-center gap-3`}><CheckCircle className='text-2xl text-primary-blue' />Clean, maintainable code architecture</li>
             </ul>
                     </motion.div>
             <motion.div
