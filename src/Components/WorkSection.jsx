@@ -5,6 +5,7 @@ import WorkArticle from "./WorkArticle";
 import UivioProject from "../assets/Project03.webp";
 import NestleForgeProject from '../assets/Project02.webp'
 import SeeArrow from '../assets/Icons/SeeArrow'
+import { Link } from "react-router";
 
 const WorkSection = ({ workRef }) => {
   const websitesInfo = [
@@ -22,7 +23,7 @@ const WorkSection = ({ workRef }) => {
     },
     {
       role: "NestleForge",
-      desc: "I designed and developed this website from Scratch, delivering a suite of powerful image tools. The interface is clean, intuitive, and user-focused—ensuring smooth navigation across features. Built with performance and scalability in mind, the entire experience is optimized for speed, responsiveness, and seamless functionality.",
+      desc: "I developed this website from Scratch, delivering a suite of powerful image tools. The interface is clean, intuitive, and user-focused—ensuring smooth navigation across features. Built with performance and scalability in mind, the entire experience is optimized for speed, responsiveness, and seamless functionality.",
       features: [
         "Image Converter",
         "Image Compressor",
@@ -96,7 +97,12 @@ const WorkSection = ({ workRef }) => {
         {/* </motion.div> */}
       </div>
 
-      <a href="#" className="text-xl text-white/90 flex items-center gap-2 hover:gap-4 px-8 py-4 rounded-xl brightness-110 bg-white/15 w-fit text-center mx-auto transition-all duration-200 " >See More <SeeArrow className='text-xl' /></a>
+      <Link to={'/my-work'} className="text-xl text-white/90 flex items-center gap-2 hover:gap-4 px-8 py-4 rounded-xl brightness-110 bg-white/15 w-fit text-center mx-auto transition-all duration-200 " > 
+         See More <SeeArrow className='text-xl' />
+        </Link>
+      <Link to={'/contact'} className="text-xl text-white/90 flex items-center gap-2 hover:gap-4 px-8 py-4 rounded-xl brightness-110 bg-white/15 w-fit text-center mx-auto transition-all duration-200 " > 
+         See More <SeeArrow className='text-xl' />
+        </Link>
 
     </section>
   );
