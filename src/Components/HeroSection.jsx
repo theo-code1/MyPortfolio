@@ -22,7 +22,7 @@ const HeroSection = ({ overviewRef, aboutRef, workRef }) => {
 
               <BlurText
                 text="Think, Plan"
-                delay={150}
+                delay={100}
                 animateBy="words"
                 direction="top"
                 onAnimationComplete={''}
@@ -30,7 +30,7 @@ const HeroSection = ({ overviewRef, aboutRef, workRef }) => {
                 />
               <BlurText
                 text="let me turn it into Website"
-                delay={150}
+                delay={100}
                 animateBy="words"
                 direction="top"
                 onAnimationComplete={''}

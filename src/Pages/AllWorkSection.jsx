@@ -10,7 +10,7 @@ const AllWorkSection = () => {
 
 
   return (
-    <section className='bg-black h-screen pt-6'>
+    <section className='bg-black h-screen pt-6 px-42 flex flex-col gap-16'>
         <ul className={`w-fit mx-auto text-white/90 px-8 py-2 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-white)] border border-white/30 flex items-center gap-16 text-[16px] font-switzer font-medium `}>
             <Link to={'/'}><li className='cursor-pointer px-2 py-1 transition-all duration-200'>Overview</li> </Link>
             <Link to={'/'}><li className='cursor-pointer px-2 py-1 transition-all duration-200'>About</li> </Link>
@@ -22,7 +22,7 @@ const AllWorkSection = () => {
             <GlobalIcon className="text-white/90 text-4xl" />
             <h2 className="text-white/90 text-2xl font-[400]">Work</h2>
           </div>
-          <h3 className="text-[16px] text-white/90 font-medium">
+          <h3 className="text-lg text-white/90 font-medium">
             Developed sleek, visually stunning and high-performance websites
             using <br /> different technology like React.js and Tailwind CSS
           </h3>

@@ -64,7 +64,7 @@ html {
     animation-delay: var(--animDelay);
   }
   .animate-position-opacity {
-    animation: AnimatePositioOpacity 1s ease-in-out forwards;
+    animation: AnimatePositionOpacity 1s ease-in-out forwards;
     animation-delay: 3s;
     opacity: 0;
     transform: translateY(40px);
@@ -142,7 +142,7 @@ html {
     opacity: 1;
   }
 }
-@keyframes AnimatePositioOpacity {
+@keyframes AnimatePositionOpacity {
   from {
     opacity: 0;
     transform: translateY(80px);
