@@ -3,10 +3,10 @@ import React from 'react'
 import { motion } from 'motion/react';
 import GoArrow from '../assets/Icons/GoArrow'
 
-const WorkArticle = ({ websiteRole, websiteDesc, features, websiteLink, websiteImg, websiteAlt }) => {
+const WorkArticle = ({ websiteRole, websiteDesc, features, websiteLink, websiteImg, websiteAlt, CategoryLabel=false, PaddingTop='96' }) => {
   
   const variants = {
-      hidden: { opacity: 0, y: 60 },
+      hidden: { opacity: 0, y: 40 },
       visible: { opacity: 1, y: 0, transition: { duration: 0.7 } }
     };
   
@@ -18,8 +18,18 @@ const WorkArticle = ({ websiteRole, websiteDesc, features, websiteLink, websiteI
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       > 
-      <article className='w-full h-auto rounded-3xl overflow-hidden font-switzer flex'>
-          <div className="content-side h-full w-1/2 bg-light-black text-white pl-16 pr-12 pt-24 pb-28  flex flex-col gap-4">
+      <article className='w-full h-auto relative rounded-2xl overflow-hidden font-switzer flex'>
+          <div className="content-side h-full w-1/2 bg-light-black text-white pl-16 pr-12 pb-28  flex flex-col gap-4"
+              style={{'paddingTop': `${PaddingTop}px`}}
+          >
+
+              {CategoryLabel && (
+                <div className='flex items-center gap-2 absolute left-16 top-8 border border-primary-blue text-sm px-4 py-1.5 rounded-xl'>
+                  <div className="dot bg-primary-blue/80 size-2 rounded-full"></div>
+                  <span>{'Category'}</span>
+                </div>
+              )} 
+
               <h1 className='text-2xl '>{websiteRole}</h1>
               <p className='text-[16px] text-white/90 mb-4'>{websiteDesc}</p>
               <ul className='text-lg flex flex-col gap-1 mb-12'>

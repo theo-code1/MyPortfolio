@@ -16,9 +16,9 @@ const ImageCarousel = () => {
 
   return (
     <div
-      className="w-full overflow-hidden opacity-0 animate-opacity [animation-delay: 4s] transition-all duration-200"
+      className="w-full overflow-hidden opacity-0 animate-opacity transition-all duration-200"
       style={{
-        '--animDelay': '4s',
+        '--animDelay': '2s',
         maskImage: "linear-gradient(to right, transparent, white 5%, white 90%, transparent)",
         WebkitMaskImage: "linear-gradient(to right, transparent, white 5%, white 90%, transparent)",
       }}

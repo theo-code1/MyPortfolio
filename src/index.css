@@ -49,29 +49,29 @@ html {
     transform: translate(120px);
   }
   .animate-poop {
-    animation: AnimatePoop 1.3s ease-in-out forwards;
-    animation-delay: 2s;
+    animation: AnimatePoop 1s ease-in-out forwards;
+    animation-delay: 1.2s;
     opacity: 0;
     transform: translateY(40px);
   }
   .animate-nav {
     animation: AnimateNav 1s ease-in-out forwards;
-    animation-delay: 4s;
+    animation-delay: 2s;
     transform: translateY(-120px);
   }
   .animate-opacity {
-    animation: AnimateOpacity 2s ease-in-out forwards;
+    animation: AnimateOpacity 1s ease-in-out forwards;
     animation-delay: var(--animDelay);
   }
   .animate-position-opacity {
     animation: AnimatePositionOpacity 1s ease-in-out forwards;
-    animation-delay: 3s;
+    animation-delay: 1.5s;
     opacity: 0;
     transform: translateY(40px);
   }
   .animate-blur {
     animation: AnimateBlur 1s ease-in-out forwards;
-    animation-delay: 4s;
+    animation-delay: 2s;
     filter: blur(80px);
   }
   .animate-infinite-scroll {

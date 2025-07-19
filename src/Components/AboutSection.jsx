@@ -119,6 +119,7 @@ const AboutSection = ({ aboutRef }) => {
             alt="Profile Image"
             className="w-128 h-120 object-cover rounded-2xl outline-4  outline-white select-none"
             draggable="false"
+            loading="lazy"
           />
           <div className="behind-layer absolute top-0 left-0 rounded-2xl rotate-4 w-full h-full bg-primary-blue/40 -z-10 shadow-2xl"></div>
         </div>

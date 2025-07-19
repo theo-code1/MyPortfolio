@@ -27,7 +27,7 @@ import { Link } from 'react-router';
         ${scrollDirection === 'down' ? '-translate-y-32' : 'translate-y-0'}
         ${isScrolled ? 'pt-4 pb-2' : 'pt-6'} `}>
         <div className={`logo items-center ${isScrolled ? 'hidden' : 'flex'}`}>
-            <img src={MyLogo} alt="theoKode Brand Logo" className='w-12'/>
+            <img src={MyLogo} alt="theoKode Brand Logo" className='w-12 select-none' draggable='false' />
             <h1 className='text-2xl font-switzer font-medium '>TheoKode</h1>
         </div>
 
