@@ -34,10 +34,24 @@ const TestimonialSection = () => {
       stars: 4,
       link: '#'
     },
+    {
+      profile: { img: PersonImg2, name: 'Jane Cooper', username: '@Jane_Cooper'},
+      platform: 'twitter',
+      message: "Your professionalism, responsiveness, and clear communication made the entire process smooth and efficient. You consistently met deadlines, delivered as promised, and adapted to feedback constructively, which added real value to the project",
+      stars: 5,
+      link: '#'
+    },
+    {
+      profile: { img: PersonImg3, name: 'Jane Cooper', username: '@Jane_Cooper'},
+      platform: 'twitter',
+      message: "I appreciated your reliability and attention to detail from the outset. You took the time to understand the project goals, provided regular updates, and maintained a high standard throughout—resulting in a successful, stress-free collaboration.",
+      stars: 4,
+      link: '#'
+    },
   ]
 
   return (
-    <section className='h-screen bg-white flex flex-col items-center gap-16 pt-24 font-switzer '>
+    <section className=' bg-white flex flex-col items-center gap-16 pt-24 pb-16 font-switzer '>
       <div className="heading flex flex-col text-center gap-2">
           <h1 className='text-[2rem] text-black font-semibold text-center'>What people say matters</h1>
           <p className='text-center text-sm text-black/50 '>Insights From People Who've Seen My Work in Action</p>
@@ -83,7 +97,7 @@ export const TestimonialArticle = ({ Img, name, userName, platform, message, sta
         {stars === 5 && ( <img src={FiveStars} alt='Stars Rate' className='h-6 select-none' draggable='false' /> )}
         {stars === 4 && ( <img src={FourStars} alt='Stars Rate' className='h-6 select-none' draggable='false' /> )}
         {stars === 3 && ( <img src={ThreeStars} alt='Stars Rate' className='h-6 select-none' draggable='false' /> )}
-        <a href={link}  className='flex items-center gap-2 text-lg cursor-pointer' >See <SeeArrow className='text-xl' /></a>
+        <a href={link}  className='flex items-center gap-2 text-lg cursor-pointer hover:gap-3 transition-all duration-150' >See <SeeArrow className='text-xl' /></a>
       </div>
 
     </article>

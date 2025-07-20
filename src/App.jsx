@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router';
 
 import HeroSection from './Components/HeroSection';
@@ -8,6 +8,7 @@ import WorkSection from './Components/WorkSection';
 import AllWorkSection from './Pages/AllWorkSection';
 import ContactSection from './Pages/ContactSection';
 import TestimonialSection from './Components/TestimonialSection';
+import Footer from './Components/Footer';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
               <OfferSection />
               <WorkSection workRef={workRef} />
               <TestimonialSection />
+              <Footer aboutRef={aboutRef} workRef={workRef} />
             </>
           }
         />
