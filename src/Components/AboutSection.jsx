@@ -15,7 +15,7 @@ const AboutSection = ({ aboutRef }) => {
     <section
       ref={aboutRef}
       id="about"
-      className="max-w-screen font-switzer flex items-center justify-between pl-48 pr-40 mt-12 mb-16 overflow-x-hidden "
+      className="max-w-screen font-switzer flex items-center justify-between pl-48 pr-40 pt-24 pb-32 overflow-x-hidden "
     >
       <div className="content-side w-[52%] flex flex-col gap-8  ">
         <motion.div

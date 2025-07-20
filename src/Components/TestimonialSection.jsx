@@ -51,7 +51,7 @@ const TestimonialSection = () => {
   ]
 
   return (
-    <section className=' bg-white flex flex-col items-center gap-16 pt-24 pb-16 font-switzer '>
+    <section className='bg-white flex flex-col items-center gap-16 py-24 font-switzer '>
       <div className="heading flex flex-col text-center gap-2">
           <h1 className='text-[2rem] text-black font-semibold text-center'>What people say matters</h1>
           <p className='text-center text-sm text-black/50 '>Insights From People Who've Seen My Work in Action</p>
@@ -70,6 +70,15 @@ const TestimonialSection = () => {
           />
         ))}
       </div>
+      <p className="text-[22px] text-center">
+        Got something to say?{" "}
+        <a
+          href="#"
+          className="underline hover:underline-offset-3 font-[400] hover:font-medium transition-all duration-200 "
+        >
+          Feel free to share your thoughts.
+        </a>
+      </p>
     </section>
   )
 }
