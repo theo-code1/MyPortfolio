@@ -100,7 +100,6 @@ const WorkSection = ({ workRef }) => {
       <Link to={'/my-work'} className="text-xl text-white/90 flex items-center gap-2 hover:gap-4 px-8 py-4 rounded-xl brightness-110 bg-white/15 w-fit text-center mx-auto transition-all duration-200 " > 
          See More <SeeArrow className='text-xl' />
         </Link>
-
     </section>
   );
 };

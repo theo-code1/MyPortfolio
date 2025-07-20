@@ -7,6 +7,7 @@ import OfferSection from './Components/OfferSection';
 import WorkSection from './Components/WorkSection';
 import AllWorkSection from './Pages/AllWorkSection';
 import ContactSection from './Pages/ContactSection';
+import TestimonialSection from './Components/TestimonialSection';
 
 function App() {
   const overviewRef = useRef(null);
@@ -24,6 +25,7 @@ function App() {
               <AboutSection aboutRef={aboutRef} />
               <OfferSection />
               <WorkSection workRef={workRef} />
+              <TestimonialSection />
             </>
           }
         />
