@@ -2,7 +2,9 @@ import React from 'react'
 import { FaXTwitter } from "react-icons/fa6";
 import { FaThreads } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
-import PersonImg from '../assets/trust3.webp'
+import PersonImg1 from '../assets/trust3.webp'
+import PersonImg2 from '../assets/trust2.webp'
+import PersonImg3 from '../assets/trust1.webp'
 import FiveStars from '../assets/5stars.webp'
 import FourStars from '../assets/4stars.webp'
 import ThreeStars from '../assets/3stars.webp'
@@ -12,31 +14,24 @@ const TestimonialSection = () => {
 
   const commentsInfo = [
     {
-      profile: { img: PersonImg, name: 'Jane Cooper', username: '@Jane_Cooper'},
+      profile: { img: PersonImg1, name: 'Jane Cooper', username: '@Jane_Cooper'},
       platform: 'twitter',
       message: "I haven't worked with you directly yet, but I've been following your work and really appreciate the quality and attention to detail in your projects. Your professionalism and the way you present your services stand out. Looking forward to seeing more from you!",
       stars: 4,
       link: '#'
     },
     {
-      profile: { img: PersonImg, name: 'Jane Cooper', username: '@Jane_Cooper'},
+      profile: { img: PersonImg2, name: 'Jane Cooper', username: '@Jane_Cooper'},
       platform: 'twitter',
-      message: "I haven't worked with you directly yet, but I've been following your work and really appreciate the quality and attention to detail in your projects. Your professionalism and the way you present your services stand out. Looking forward to seeing more from you!",
+      message: "Your professionalism, responsiveness, and clear communication made the entire process smooth and efficient. You consistently met deadlines, delivered as promised, and adapted to feedback constructively, which added real value to the project",
       stars: 5,
       link: '#'
     },
     {
-      profile: { img: PersonImg, name: 'Jane Cooper', username: '@Jane_Cooper'},
+      profile: { img: PersonImg3, name: 'Jane Cooper', username: '@Jane_Cooper'},
       platform: 'twitter',
-      message: "I haven't worked with you directly yet, but I've been following your work and really appreciate the quality and attention to detail in your projects. Your professionalism and the way you present your services stand out. Looking forward to seeing more from you!",
+      message: "I appreciated your reliability and attention to detail from the outset. You took the time to understand the project goals, provided regular updates, and maintained a high standard throughout—resulting in a successful, stress-free collaboration.",
       stars: 4,
-      link: '#'
-    },
-    {
-      profile: { img: PersonImg, name: 'Jane Cooper', username: '@Jane_Cooper'},
-      platform: 'twitter',
-      message: "I haven't worked with you directly yet, but I've been following your work and really appreciate the quality and attention to detail in your projects. Your professionalism and the way you present your services stand out. Looking forward to seeing more from you!",
-      stars: 3,
       link: '#'
     },
   ]
@@ -78,9 +73,9 @@ export const TestimonialArticle = ({ Img, name, userName, platform, message, sta
             <h3 className='text-sm text-black/50'>{userName}</h3>
           </div>
         </div>
-        {platform === 'twitter' && (<FaXTwitter className='text-4xl'/> )}
-        {platform === 'threads' && (<FaThreads className='text-4xl'/> )}
-        {platform === 'linkedin' && (<FaLinkedinIn className='text-4xl'/> )}
+          {platform === 'twitter' && (<a href='' className='hover:bg-gray-200/80 p-2 rounded-full transition-all duration-150' > <FaXTwitter className='text-4xl'/></a> )}
+          {platform === 'threads' && (<a href=''> <FaThreads className='text-4xl'/></a> )}
+          {platform === 'linkedin' && (<a href=''> <FaLinkedinIn className='text-4xl'/></a> )}
       </div>
       <p className='text-[16px] w-[420px]'>{message}</p>
 

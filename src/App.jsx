@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router';
 
 import HeroSection from './Components/HeroSection';
@@ -9,10 +9,12 @@ import AllWorkSection from './Pages/AllWorkSection';
 import ContactSection from './Pages/ContactSection';
 import TestimonialSection from './Components/TestimonialSection';
 
+
 function App() {
   const overviewRef = useRef(null);
   const aboutRef = useRef(null);
   const workRef = useRef(null);
+  
 
   return (
     <BrowserRouter>
