@@ -138,7 +138,7 @@ export default AllWorkSection
 
 export const FilterBar = ({ currentFilter, setCurrentFilter}) => {
 
-  const filterItems = ['All', 'Personal', 'Landing Page', 'Web App', 'Portfolio', 'E-commerce', 'Practice']
+  const filterItems = ['All', 'Landing Page', 'Web App', 'Portfolio', 'E-commerce', 'Practice']
  
   console.log(currentFilter)
 
