@@ -38,7 +38,7 @@ import { Link } from 'react-router';
             <Link to={'/contact'} ><li className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Contact</li></Link>
         </ul>
 
-        <button type="button" className={`bg-primary-blue brightness-105 hover:brightness-95 shadow-[0_4px_10px_0_var(--color-shadow-black)] hover:shadow-[0_2px_10px_0_var(--color-shadow-black-02)] transition-all duration-200 px-8 py-3 rounded-xl text-[16px] text-white font-switzer font-medium cursor-pointer ${isScrolled ? 'hidden' : 'flex'}`}>Let's Connect</button>
+        <Link to={'/contact'} className={`bg-primary-blue brightness-105 hover:brightness-95 shadow-[0_4px_10px_0_var(--color-shadow-black)] hover:shadow-[0_2px_10px_0_var(--color-shadow-black-02)] transition-all duration-200 px-8 py-3 rounded-xl text-[16px] text-white font-switzer font-medium cursor-pointer ${isScrolled ? 'hidden' : 'flex'}`}>Let's Connect</Link>
     </nav>
   )
 }

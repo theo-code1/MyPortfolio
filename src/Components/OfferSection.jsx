@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
+
 import CodeIcon from "../assets/Icons/CodeIcon";
 import WebsiteIcon from "../assets/Icons/WebsiteIcon";
 import DesignIcon from "../assets/Icons/DesignIcon";
@@ -105,12 +107,11 @@ const OfferSection = () => {
       </motion.div>
       <p className="text-[22px] text-center">
         Have an Idea?{" "}
-        <a
-          href="#"
+        <Link to={'/contact'} 
           className="underline hover:underline-offset-3 font-[400] hover:font-medium transition-all duration-200 "
-        >
+          >
           Let's Bring It to Life.
-        </a>
+          </Link>
       </p>
     </section>
   );

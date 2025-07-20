@@ -73,8 +73,9 @@ const TestimonialSection = () => {
       <p className="text-[22px] text-center">
         Got something to say?{" "}
         <a
-          href="#"
+          href="https://x.com/TheoKode_?t=Aeyn9E65s60T6on178qkMg&s=08"
           className="underline hover:underline-offset-3 font-[400] hover:font-medium transition-all duration-200 "
+          target='_blank'
         >
           Feel free to share your thoughts.
         </a>

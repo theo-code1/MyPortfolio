@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import BlurText from "./BlurText";
 import GridBackground from '../assets/GridBackground'
 import NavBar from './NavBar'
@@ -40,8 +42,8 @@ const HeroSection = ({ overviewRef, aboutRef, workRef }) => {
               </div>
               <h3 className='text-xl font-switzer text-dark-blue mb-8 animate-poop' style={{"--delay": 7}}>Never miss a note, an idea, or a connection again—stay organized, inspired,<br />and effortlessly connected every step of the way.</h3>
               <div className="cta-buttons flex items-center gap-6 mx-auto animate-position-opacity">
-                  <a href="#" className='flex items-center gap-2 px-8 py-4 bg-white border-[1.5px] border-black rounded-xl font-switzer font-medium text-lg hover:shadow-[0_2px_20px_0_var(--color-shadow-black)] cursor-pointer transition-all duration-200 group'>See Projects <SeeArrow className='text-2xl group-hover:translate-x-2  transition-all duration-200' /></a>
-                  <a href="#" className='flex items-center gap-2 px-8 py-4 bg-primary-blue text-white rounded-xl font-switzer font-medium text-lg hover:brightness-95 active:brightness-80 transition-all duration-200 cursor-pointer group'>Start Your Project <GoArrow className='text-2xl group-hover:translate-x-2 group-hover:-translate-y-1 group-hover:scale-[1.1] transition-all duration-200'/></a>
+                  <Link to={'/my-work'} className='flex items-center gap-2 px-8 py-4 bg-white border-[1.5px] border-black rounded-xl font-switzer font-medium text-lg hover:shadow-[0_2px_20px_0_var(--color-shadow-black)] cursor-pointer transition-all duration-200 group'>See Projects <SeeArrow className='text-2xl group-hover:translate-x-2  transition-all duration-200' /></Link>
+                  <Link to={'/contact'} className='flex items-center gap-2 px-8 py-4 bg-primary-blue text-white rounded-xl font-switzer font-medium text-lg hover:brightness-95 active:brightness-80 transition-all duration-200 cursor-pointer group' >Start Your Project <GoArrow className='text-2xl group-hover:translate-x-2 group-hover:-translate-y-1 group-hover:scale-[1.1] transition-all duration-200'/></Link>
               </div>
               <div className="trust flex gap-4 items-center mx-auto animate-blur mb-24">
                 <h3 className='text-lg text-dark-blue font-medium'>Trusted by</h3>

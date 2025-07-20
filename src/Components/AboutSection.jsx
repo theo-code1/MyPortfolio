@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
+
 import CheckCircle from "../assets/Icons/CheckCircle";
 import RightArrow from "../assets/Icons/RightArrow";
 import ProfileImg from "../assets/ProfileImg.webp";
@@ -90,19 +92,18 @@ const AboutSection = ({ aboutRef }) => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <div className="ctas-buttons flex items-center gap-4 ">
-            <a
-              href="#"
+            <Link to={'/contact'} 
               className="flex items-center gap-2 text-lg text-white bg-primary-blue px-8 py-4 rounded-lg group cursor-pointer "
-            >
+              >
               Let's Connect{" "}
               <RightArrow className="text-xl group-hover:translate-x-2 transition-all duration-200" />
-            </a>
-            <a
-              href="#"
+
+              </Link>
+            <Link to={'/my-work'} 
               className="text-lg border border-black/40 px-8 py-4 rounded-lg hover:shadow-[0_2px_20px_0_var(--color-shadow-black)] transition-all duration-200 cursor-pointer "
-            >
+              >
               View Portfolio
-            </a>
+              </Link>
           </div>
         </motion.div>
       </div>
