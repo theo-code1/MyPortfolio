@@ -40,35 +40,21 @@ const AllWorkSection = () => {
       ],
       websiteLink: '#',
       websiteImg: MyPortfolio,
-      websiteAlt: 'uivio website (clipboard search)',
+      websiteAlt: 'My Portfolio (Personal)',
       category: 'Portfolio'
-    },
-    {
-      title: 'My Portfolio',
-      desc: 'A clean and modern developer portfolio showcasing creative web solutions with precision and style. Crafted to reflect clarity, performance, and professional impact. Built for clients, collaborators, and opportunities that value quality work.',
-      features: [
-        'Interactive Showcase',
-        'Clean UI Design',
-        'Client Testimonials',
-      ],
-      websiteLink: '#',
-      websiteImg: MyPortfolio,
-      websiteAlt: 'uivio website (clipboard search)',
-      category: 'Personal'
     },
     {
       title: 'NestleForge',
       desc: 'I developed this website from Scratch, delivering a suite of powerful image tools. The interface is clean, intuitive, and user-focused—ensuring smooth navigation across features. Built with performance and scalability in mind, the entire experience is optimized for speed, responsiveness, and seamless functionality.',
       features: [
-        'Image Converter',
-        'Image Compressor',
+        'Image Converter&Compressor',
         'Background Remover',
         'Palette Extractor'
       ],
       websiteLink: '#',
       websiteImg: NestleForgeProject,
       websiteAlt: 'NestleFOrge website (Image Tools)',
-      category: 'Practice'
+      category: 'Web App'
     },
     {
       title: 'Starbucks Hero Section',
@@ -84,18 +70,18 @@ const AllWorkSection = () => {
       category: 'Practice'
     },
     {
-      title: 'Portfolio Website',
-      desc: 'A creative portfolio website showcasing artistic work and projects. Features a gallery layout with smooth animations and interactive elements.',
+      title: 'Restaurant Website',
+      desc: "A stylish restaurant site combining visuals with a refined dining vibe. Highlights top dishes, curated menus, and simple reservations. Built to engage food lovers and create a smooth online experience.",
       features: [
-        'Gallery layout',
-        'Smooth animations',
-        'Interactive elements',
-        'Responsive design'
+        'Interactive Menu',
+        'Online Reservations',
+        'Customer Favorites Section'
       ],
       websiteLink: '#',
       websiteImg: Project04,
       websiteAlt: 'Portfolio website',
-      category: 'Portfolio'
+      category: 'E-commerce',
+      StatusLabel: 'Coming Soon'
     }
   ]
 
@@ -137,6 +123,7 @@ const AllWorkSection = () => {
               websiteImg={project.websiteImg}
               websiteAlt={project.websiteAlt}
               CategoryLabel={currentFilter === 'All' ? project.category : ''}
+              Statuslabel={project.StatusLabel}
             />
           ))}
         </div>
@@ -151,7 +138,7 @@ export default AllWorkSection
 
 export const FilterBar = ({ currentFilter, setCurrentFilter}) => {
 
-  const filterItems = ['All', 'Personal', 'Landing Page', 'Portfolio', 'E-commerce', 'Practice']
+  const filterItems = ['All', 'Personal', 'Landing Page', 'Web App', 'Portfolio', 'E-commerce', 'Practice']
  
   console.log(currentFilter)
 

@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from 'motion/react';
 import GoArrow from '../assets/Icons/GoArrow'
 
-const WorkArticle = ({ websiteRole, websiteDesc, features, websiteLink, websiteImg, websiteAlt, CategoryLabel=false, PaddingTop='96' }) => {
+const WorkArticle = ({ websiteRole, websiteDesc, features, websiteLink, websiteImg, websiteAlt, CategoryLabel=false, Statuslabel=false, PaddingTop='96' }) => {
   
   const variants = {
       hidden: { opacity: 0, y: 40 },
@@ -26,7 +26,13 @@ const WorkArticle = ({ websiteRole, websiteDesc, features, websiteLink, websiteI
               {CategoryLabel && (
                 <div className='flex items-center gap-2 absolute left-16 top-8 border border-primary-blue text-sm px-4 py-1.5 rounded-xl'>
                   <div className="dot bg-primary-blue/80 size-2 rounded-full"></div>
-                  <span>{'Category'}</span>
+                  <span>{CategoryLabel}</span>
+                </div>
+              )} 
+              {Statuslabel && (
+                <div className='flex items-center gap-2 absolute left-16 top-8 border border-yellow-200 text-sm px-4 py-1.5 rounded-xl'>
+                  <div className="dot bg-yellow-200 size-2 rounded-full"></div>
+                  <span>{Statuslabel}</span>
                 </div>
               )} 
 
