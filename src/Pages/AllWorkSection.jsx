@@ -19,7 +19,7 @@ const AllWorkSection = () => {
   const ProjectsInfo = [
     {
       title: 'UiVio',
-      desc: 'This landing page features a sleek, mobile-first clipboard manager app focused on usability and productivity, showcasing clipboard history, cross-device sync, privacy, and smart pasting through clear visuals, concise headings, and strong CTAs that guide users from benefits to testimonials and pricing.',
+      desc: 'A mobile-first landing page crafted for a clipboard manager app, focused on usability and productivity. It highlights features like clipboard history, cross-device sync, privacy, and smart pasting—using clear visuals, concise copy, and strong calls-to-action. The structure flows seamlessly from benefits to testimonials and pricing, guiding users with intent.',
       features: [
         'Modern, clean design',
         'Optimized React development',
@@ -45,7 +45,7 @@ const AllWorkSection = () => {
     },
     {
       title: 'NestleForge',
-      desc: 'I developed this website from Scratch, delivering a suite of powerful image tools. The interface is clean, intuitive, and user-focused—ensuring smooth navigation across features. Built with performance and scalability in mind, the entire experience is optimized for speed, responsiveness, and seamless functionality.',
+      desc: 'I developed this web app from scratch, delivering a powerful suite of image tools. The interface is clean, intuitive, and built for effortless user interaction. Focused on performance and scalability, the platform ensures fast processing, smooth navigation, and reliable functionality across all devices.',
       features: [
         'Image Converter&Compressor',
         'Background Remover',
@@ -58,7 +58,7 @@ const AllWorkSection = () => {
     },
     {
       title: 'Starbucks Hero Section',
-      desc: "A visually striking hero section with a Starbucks Frappuccino against a green background, featuring repeated 'Starbucks' text for brand emphasis. Includes navigation, product description, and an 'Order Now' call to action.",
+      desc: "A visually striking hero section featuring a Starbucks Frappuccino against a vibrant green background, with repeated 'Starbucks' text for brand emphasis. It includes smooth navigation, a clear product description, and a bold 'Order Now' call to action—designed to capture attention and drive interaction.",
       features: [
         'Visual Appeal',
         'Branding',
@@ -71,7 +71,7 @@ const AllWorkSection = () => {
     },
     {
       title: 'Restaurant Website',
-      desc: "A stylish restaurant site combining visuals with a refined dining vibe. Highlights top dishes, curated menus, and simple reservations. Built to engage food lovers and create a smooth online experience.",
+      desc: "A stylish restaurant site combining rich visuals with a refined dining atmosphere. It highlights top dishes, chef-curated menus, and an easy-to-use reservation system. Designed to engage food lovers, the experience is smooth, responsive, and tailored for both desktop and mobile users.",
       features: [
         'Interactive Menu',
         'Online Reservations',
@@ -91,7 +91,7 @@ const AllWorkSection = () => {
     : ProjectsInfo.filter(project => project.category === currentFilter);
 
   return (
-    <section className='bg-black min-h-screen pt-6 px-42 flex flex-col gap-16'>
+    <section className='bg-black min-h-screen pt-6 pb-12 px-42 flex flex-col gap-16'>
         <ul className={`w-fit mx-auto text-white/90 px-8 py-2 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-white)] border border-white/30 flex items-center gap-16 text-[16px] font-switzer font-medium `}>
             <Link to={'/'}><li className='cursor-pointer px-2 py-1 transition-all duration-200'>Overview</li> </Link>
             <Link to={'/'}><li className='cursor-pointer px-2 py-1 transition-all duration-200'>About</li> </Link>
@@ -122,7 +122,7 @@ const AllWorkSection = () => {
               websiteLink={project.websiteLink}
               websiteImg={project.websiteImg}
               websiteAlt={project.websiteAlt}
-              CategoryLabel={currentFilter === 'All' ? project.category : ''}
+              CategoryLabel={currentFilter === 'All' && !project.StatusLabel ? project.category : ''}
               Statuslabel={project.StatusLabel}
             />
           ))}

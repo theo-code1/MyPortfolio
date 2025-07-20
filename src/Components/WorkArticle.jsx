@@ -43,7 +43,7 @@ const WorkArticle = ({ websiteRole, websiteDesc, features, websiteLink, websiteI
                       <li className='list-disc list-inside list-' key={index}>{feature}</li>
                   ))}
               </ul>
-              <a href={websiteLink} className='flex items-center gap-2 text-lg px-4 py-1.5 rounded-lg  w-fit bg-gradient-to-br from-white/20 hover:from-white/25 from-0% to-80% to-transparent cursor-pointer transition duration-200 group' target='_blank' >See Website <GoArrow className='text-2xl origin-bottom group-hover:scale-[1.1] group-hover:translate-x-[2px] group-hover:translate-y-[2px transition-all duration-200 ' /> </a>
+              <a href={Statuslabel ? null : websiteLink} o className={`flex items-center gap-2 text-lg px-4 py-1.5 rounded-lg  w-fit bg-gradient-to-br from-white/20  ${Statuslabel ? 'cursor-progress' : 'cursor-pointer hover:from-white/25 from-0% to-80% to-transparent transition duration-200 group'}`} target='_blank' >See Website <GoArrow className='text-2xl origin-bottom group-hover:scale-[1.1] group-hover:translate-x-[2px] group-hover:translate-y-[2px transition-all duration-200 ' /> </a>
           </div>
 
           <div className="img-side relative h-[full] w-1/2 bg-gradient-to-br from-[#040404] from-[-20%] to-white/80 to-120% overflow-hidden ">
