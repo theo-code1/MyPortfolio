@@ -3,9 +3,16 @@ import { useState, useEffect } from 'react';
 import useScrollDirection from './hook/UseScrollDirection';
 import { Link } from 'react-router';
 
-    const NavBar = ({ overviewRef, aboutRef, workRef }) => {
+
+
+const scrollToSection = (ref) => {
+  ref.current?.scrollIntoView({ behavior: "smooth" });
+};
+
+const NavBar = ({ overviewRef, aboutRef, workRef }) => {
   const scrollDirection = useScrollDirection();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isPhoneMenuOpened, setIsPhoneMenuOpened] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,32 +22,56 @@ import { Link } from 'react-router';
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+console.log(isPhoneMenuOpened)
 
-
-  const scrollToSection = (ref) => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     // <nav className={`flex-1/2 items-center justify-between px-20 mt-6`}>
-    <nav className={`flex items-center justify-between px-20 fixed top-0 left-0 w-full z-50 transition-all duration-400 animate-nav
+    <nav className={`flex items-center justify-between md:gap-4 px-4 md:px-8 lg::px-20 backdrop-blur-2xl md:backdrop-blur-none rounded fixed top-0 left-0 w-full z-50 transition-all duration-400 animate-nav
         ${scrollDirection === 'down' ? '-translate-y-32' : 'translate-y-0'}
         ${isScrolled ? 'pt-4 pb-2' : 'pt-6'} `}>
-        <div className={`logo items-center ${isScrolled ? 'hidden' : 'flex'}`}>
-            <img src={MyLogo} alt="theoKode Brand Logo" className='w-12 select-none' draggable='false' />
+        <div className={`logo items-center ${isScrolled ? 'flex md:hidden' : 'flex'}`}>
+            <img src={MyLogo} alt="theoKode Brand Logo" className='w-10 md:w-12 select-none' draggable='false' />
             <h1 className='text-2xl font-switzer font-medium '>TheoKode</h1>
         </div>
 
-        <ul className={`px-8 py-2 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-black)] border border-black/10 flex items-center gap-16 text-[16px] font-switzer font-medium ${isScrolled ? 'mx-auto bg-white/50 backdrop-blur-sm' : 'bg-white'}`}>
+        <ul className={`hidden md:flex items-center md:gap-8 lg:gap-16 text-[16px] font-switzer font-medium px-4 lg:px-8 py-2 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-black)] border border-black/10 ${isScrolled ? 'mx-auto bg-white/50 backdrop-blur-sm' : 'bg-white'}`}>
             <li onClick={() => scrollToSection(overviewRef)}  className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Overview</li>
             <li onClick={() => scrollToSection(aboutRef)}  className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>About</li>
             <li onClick={() => scrollToSection(workRef)}  className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Work</li>
             <Link to={'/contact'} ><li className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Contact</li></Link>
         </ul>
 
-        <Link to={'/contact'} className={`bg-primary-blue brightness-105 hover:brightness-95 shadow-[0_4px_10px_0_var(--color-shadow-black)] hover:shadow-[0_2px_10px_0_var(--color-shadow-black-02)] transition-all duration-200 px-8 py-3 rounded-xl text-[16px] text-white font-switzer font-medium cursor-pointer ${isScrolled ? 'hidden' : 'flex'}`}>Let's Connect</Link>
+        <Link to={'/contact'} className={`hidden md:flex bg-primary-blue brightness-105 hover:brightness-95 shadow-[0_4px_10px_0_var(--color-shadow-black)] hover:shadow-[0_2px_10px_0_var(--color-shadow-black-02)] transition-all duration-200 px-4 lg:px-8 py-3 rounded-xl text-[16px] text-white font-switzer font-medium cursor-pointer ${isScrolled ? 'md:hidden' : 'flex'}`}>Let's Connect</Link>
+        
+        <h1 onClick={() => setIsPhoneMenuOpened(!isPhoneMenuOpened)} className='flex md:hidden text-3xl font-bold z-[99]'>X</h1>
+        <PhoneMenu overviewRef={overviewRef} aboutRef={aboutRef} workRef={workRef} 
+          isPhoneMenuOpened={isPhoneMenuOpened}
+        />
     </nav>
   )
 }
 
 export default NavBar
+
+
+const PhoneMenu = ({ overviewRef, aboutRef, workRef, isPhoneMenuOpened }) => {
+  return(
+    <div className={`menu w-screen flex md:hidden flex-col items-center gap-12 h-screen bg-white absolute top-0 left-0 z-50 pt-[20dvh] overflow-hidden ${isPhoneMenuOpened ? 'translate-x-0' : 'translate-x-full' } transition-transform duration-300`}>
+      <img src={MyLogo} alt="" className='w-12 object-contain absolute top-8 left-4 select-none' draggable='false' />
+
+      <ul className={`flex flex-col items-center gap-4 mx-auto w-full text-xl font-switzer font-medium px-8 py-2`}>
+            <li onClick={() => scrollToSection(overviewRef)}  className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Overview</li>
+            <hr className='w-1/2 text-black/30 ' />
+            <li onClick={() => scrollToSection(aboutRef)}  className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>About</li>
+            <hr className='w-1/2 text-black/30 ' />
+            <li onClick={() => scrollToSection(workRef)}  className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Work</li>
+            <hr className='w-1/2 text-black/30 ' />
+            <Link to={'/contact'} ><li className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Contact</li></Link>
+        </ul>
+
+        <Link to={'/contact'} className={`flex md:hidden w-fit bg-primary-blue brightness-105 active:brightness-95 shadow-[0_4px_10px_0_var(--color-shadow-black)] active:shadow-[0_2px_10px_0_var(--color-shadow-black-02)] transition-all duration-200 px-8 py-3 rounded-xl text-lg text-white font-switzer font-medium `}>Let's Connect</Link>
+
+    </div>
+  )
+}

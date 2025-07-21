@@ -22,23 +22,20 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
-      const response = await fetch("https://hook.us2.make.com/jlchoelh1i0gtndxr1f7i75k1eaz4xxn", {
+      // console.log("Sending data:", formData);
+      const response = await fetch("https://hook.us2.make.com/e8pgp9qgu2r2cef3suxcmuxomrhu72if", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        }),
+        body: JSON.stringify(formData),
       });
-
+  
       if (response.ok) {
         alert("Message sent!");
+        setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
         alert("Error sending message.");
       }
@@ -47,6 +44,7 @@ const Contact = () => {
       alert("Network error.");
     }
   };
+  
 
   return (
     <section className="bg-black h-screen max-w-screen flex flex-col gap-16 pt-6 px-36">
@@ -108,7 +106,7 @@ const Contact = () => {
         </div>
         <div className="form-content w-1/2 pl-24 ">
           <form
-            action={handleSubmit}
+            onSubmit={handleSubmit}
             className="bg-white/10 flex flex-col gap-8 border border-white/40 rounded-2xl px-8 pt-10 pb-12"
           >
             <div className="name-email flex gap-4 w-full">
@@ -123,6 +121,7 @@ const Contact = () => {
                   className="w-full bg-white/5 px-4 py-4 text-lg rounded-lg border-2 border-white/40 placeholder:text-[#A3A3A5] placeholder:text-[16px] "
                   placeholder="Enter full name"
                   onChange={handleChange}
+                  value={formData.name}
                   required
                 />
               </div>
@@ -138,6 +137,7 @@ const Contact = () => {
                   className="w-full bg-white/5 px-4 py-4 text-lg rounded-lg border-2 border-white/40 placeholder:text-[#A3A3A5] placeholder:text-[16px] "
                   placeholder="Enter email"
                   onChange={handleChange}
+                  value={formData.email}
                   required
                 />
               </div>
@@ -154,6 +154,7 @@ const Contact = () => {
                 className="w-full bg-white/5 px-4 py-4 text-lg rounded-lg border-2 border-white/40 placeholder:text-[#A3A3A5] placeholder:text-[16px] "
                 placeholder="e.g. Portfolio, E-commerce..."
                 onChange={handleChange}
+                value={formData.subject}
                 required
               />
             </div>
@@ -168,6 +169,7 @@ const Contact = () => {
                 className="w-full h-40 resize-none bg-white/5 px-4 py-4 text-lg rounded-lg border-2 border-white/40 placeholder:text-[#A3A3A5] placeholder:text-[16px]"
                 placeholder="how can i help you?"
                 onChange={handleChange}
+                value={formData.message}
                 required
               ></textarea>
             </div>

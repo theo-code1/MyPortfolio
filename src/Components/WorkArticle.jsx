@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
-import { motion } from 'motion/react';
+import React from 'react'   
 import GoArrow from '../assets/Icons/GoArrow'
 
 const WorkArticle = ({ websiteRole, websiteDesc, features, websiteLink, websiteImg, websiteAlt, CategoryLabel=false, Statuslabel=false, PaddingTop='96' }) => {
@@ -11,13 +10,6 @@ const WorkArticle = ({ websiteRole, websiteDesc, features, websiteLink, websiteI
     };
   
   return (
-    <motion.div
-        variants={variants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      > 
       <article className='w-full h-auto relative rounded-2xl overflow-hidden font-switzer flex'>
           <div className="content-side h-full w-1/2 bg-light-black text-white pl-16 pr-12 pb-28  flex flex-col gap-4"
               style={{'paddingTop': `${PaddingTop}px`}}
@@ -50,7 +42,6 @@ const WorkArticle = ({ websiteRole, websiteDesc, features, websiteLink, websiteI
                   <img src={websiteImg} alt={websiteAlt} className='absolute top-3/20 left-3/20 h-17/20 object-cover object-left-top rounded-tl-3xl select-none' draggable='false' />
           </div>
       </article>
-    </motion.div>
   )
 }
 

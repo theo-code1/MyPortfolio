@@ -76,7 +76,7 @@ html {
   }
   .animate-poop {
     animation: AnimatePoop 1s ease-in-out forwards;
-    animation-delay: 1.2s;
+    animation-delay: calc(var(--delay) * 1s);
     opacity: 0;
     transform: translateY(40px);
   }
