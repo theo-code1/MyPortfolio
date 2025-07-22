@@ -44,7 +44,7 @@ const OfferSection = () => {
   };
 
   return (
-    <section className="h max-w-screen font-switzer flex flex-col gap-16 items-centeroverflow-x-hidden px-4 md:px-16 my-16 border ">
+    <section className="h max-w-screen font-switzer flex flex-col gap-16 items-centeroverflow-x-hidden px-4 md:px-16 my-16 ">
       <motion.div
         variants={variants}
         initial="hidden"
@@ -105,7 +105,7 @@ const OfferSection = () => {
           />
         </div>
       </motion.div>
-      <p className="text-[22px] text-center">
+      <p className="text-lg md:text-[22px] text-center">
         Have an Idea?{" "}
         <Link to={'/contact'} 
           className="underline hover:underline-offset-3 font-[400] hover:font-medium transition-all duration-200 "
@@ -126,17 +126,17 @@ export const OfferCard = ({ IconChild, OfferTitle, OfferDesc, skillsBackground, 
 
 
   return (
-    <article className='relative font-switzer w-[90dvw] md:w-[450px] px-6 md:px-8 pt-16 pb-6 rounded-xl bg-white  flex flex-col gap- items-center justify-between border border-black/20 shadow-[0_2px_24px_0_var(--color-shadow-black)] hover:shadow-[0_4px_32px_0_var(--color-shadow-black)] transition-all duration-200 cursor-pointer'>
+    <article className='relative font-switzer w-[90dvw] md:w-[450px] px-6 md:px-8 pt-16 pb-6 rounded-xl bg-white  flex flex-col gap-4 md:gap-8 items-center justify-between border border-black/20 shadow-[0_2px_24px_0_var(--color-shadow-black)] hover:shadow-[0_4px_32px_0_var(--color-shadow-black)] transition-all duration-200 cursor-pointer'>
         <div className="offer-icon absolute -top-8 left-1/2 -translate-x-1/2 w-20 "
         >
             {IconChild}
         </div>
-        <h1 className='text-[28px] font-semibold text-black mb-8'>{OfferTitle}</h1>
-        <p className='text-lg text-black/75 mb-16'>{OfferDesc}</p>
+        <h1 className='text-2xl md:text-[28px] font-semibold text-black '>{OfferTitle}</h1>
+        <p className='text-[16px] md:text-lg text-black/75 mb-4 md:mb-8'>{OfferDesc}</p>
         <div className="skills flex flex-wrap self-end gap-2 ">
           {skills.map((skill, index) => (
 
-            <span key={index} className='text-[17px] w-fit px-[14px]  py-[2.5px] space-y-2 rounded-full'
+            <span key={index} className='text-sm md:text-[17px] w-fit px-2 md:px-[14px] py-[2px] md:py-[2.5px] space-y-2 rounded-full'
             style={{ backgroundColor: skillsBackground,
               color: skillsColor  
             }}
