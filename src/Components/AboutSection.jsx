@@ -41,7 +41,7 @@ const AboutSection = ({ aboutRef }) => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-[64px] leading-20 font-extrabold">
+          <h1 className="text-[64px] leading-20 font-extrabold mb-2">
             Who am I, and
             <br />
             Why Work with <span className="text-silver">Me</span> ?{" "}

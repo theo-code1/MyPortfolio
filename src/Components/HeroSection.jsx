@@ -15,7 +15,7 @@ const HeroSection = ({ overviewRef, aboutRef, workRef }) => {
 
   return (
     <section id="Overview" ref={overviewRef} className='h-max pt-10 md:pt-20 lg:pt-24 pb-12 px-2 max-w-screen overflow-x-hidden'>
-        <GridBackground className='absolute top-0 left-1/2 -translate-x-1/2 w-fit -z-10 animate-opacity'/>
+        <GridBackground className='absolute top-0 left-1/2 -translate-x-1/2 w-fit h-[95dvh] md:h-auto -z-10 animate-opacity'/>
         <NavBar overviewRef={overviewRef} aboutRef={aboutRef} workRef={workRef} />
 
         <div className="cta-content flex flex-col gap-6 text-center w-fit mx-auto mt-24">
@@ -41,8 +41,8 @@ const HeroSection = ({ overviewRef, aboutRef, workRef }) => {
                 <h1 className="flex md:hidden text-3xl font-clash-display font-bold ">Think, Plan<br />let me turn it into Website</h1>
 
               </div>
-              <h3 className='text-sm md:text-xl font-switzer text-dark-blue mb-8 animate-none md:animate-poop [--delay:0.5] lg:[--delay:1.2]'  >Never miss a note, an idea, or a connection again—stay organized, inspired,<br className="hidden md:flex" /> and effortlessly connected every step of the way.</h3>
-              <div className="cta-buttons flex items-center gap-3 md:gap-6 mx-auto animate-none md:animate-position-opacity">
+              <h3 className='text-sm md:text-xl font-switzer text-dark-blue mb-8 animate-poop [--delay:0.5] lg:[--delay:1.2]'  >Never miss a note, an idea, or a connection again—stay organized, inspired,<br className="hidden md:flex" /> and effortlessly connected every step of the way.</h3>
+              <div className="cta-buttons flex items-center gap-3 md:gap-6 mx-auto md:animate-position-opacity" style={{animation: 'none'}}>
                   <Link to={'/my-work'} className='flex items-center gap-2 px-4 md:px-8 py-3 md:py-4 bg-white border-[1.5px] border-black rounded-xl font-switzer font-medium text-[16px] md:text-lg hover:shadow-[0_2px_20px_0_var(--color-shadow-black)] cursor-pointer transition-all duration-200 group'>See Projects <SeeArrow className='text-2xl group-hover:translate-x-2  transition-all duration-200' /></Link>
                   <Link to={'/contact'} className='flex items-center gap-2 px-4 md:px-8 py-3 md:py-4 bg-primary-blue text-white rounded-xl font-switzer font-medium text-[16px] md:text-lg hover:brightness-95 active:brightness-80 transition-all duration-200 cursor-pointer group' >Start Your Project <GoArrow className='text-2xl group-hover:translate-x-2 group-hover:-translate-y-1 group-hover:scale-[1.1] transition-all duration-200'/></Link>
               </div>
