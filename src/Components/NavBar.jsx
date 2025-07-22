@@ -48,7 +48,7 @@ console.log(isPhoneMenuOpened)
         <Link to={'/contact'} className={`hidden md:flex bg-primary-blue brightness-105 hover:brightness-95 shadow-[0_4px_10px_0_var(--color-shadow-black)] hover:shadow-[0_2px_10px_0_var(--color-shadow-black-02)] transition-all duration-200 px-4 lg:px-8 py-3 rounded-xl text-[16px] text-white font-switzer font-medium cursor-pointer ${isScrolled ? 'md:hidden' : 'flex'}`}>Let's Connect</Link>
         
         {/* <h1  className='flex md:hidden text-3xl font-bold z-[99]'>X</h1> */}
-        <Menu onClick={() => setIsPhoneMenuOpened(!isPhoneMenuOpened)} className='text-4xl' />
+        <Menu onClick={() => setIsPhoneMenuOpened(!isPhoneMenuOpened)} className='flex md:hidden text-4xl' />
 
         <PhoneMenu overviewRef={overviewRef} aboutRef={aboutRef} workRef={workRef} 
           isPhoneMenuOpened={isPhoneMenuOpened} setIsPhoneMenuOpened={setIsPhoneMenuOpened}

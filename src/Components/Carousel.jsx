@@ -26,7 +26,7 @@ const ImageCarousel = () => {
       <div className="flex w-max animate-infinite-scroll hover:[animation-duration: 100]">
         {imageList.map((image, index) => (
           <div key={index} className="px-4 py-8">
-            <div className="relative group w-[30dvw] h-auto rounded-lg overflow-hidden shadow-[0_4px_20px_0_var(--color-shadow-black-02)] transition-all duration-300 ">
+            <div className="relative group w-[50dvw] md:w-[40dvw] lg:w-[30dvw] h-auto rounded-lg overflow-hidden shadow-[0_4px_20px_0_var(--color-shadow-black-02)] transition-all duration-300 ">
               <img
                 src={image.src}
                 alt={image.alt}
