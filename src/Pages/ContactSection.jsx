@@ -5,6 +5,7 @@ import { useState } from "react";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaThreads } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
+import Mail from '../assets/Icons/Mail'
 import SendIcon from "../assets/Icons/SendIcon";
 
 const Contact = () => {
@@ -90,17 +91,17 @@ const Contact = () => {
             <br /> the form on the side—let's start the conversation.
           </p>
           <div className="social-media flex items-center gap-8 text-3xl">
-            <a href="">
+            <a href="https://x.com/TheoKode_?t=Aeyn9E65s60T6on178qkMg&s=08" target="_blank">
               <FaXTwitter />
             </a>
-            <a href="">
+            <a href="https://www.linkedin.com/in/theo-kode-0b35a632a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank">
               <FaLinkedinIn />
             </a>
-            <a href="">
-              <FaThreads />
+            <a href="mailto:codingbusiness99@gmail.com" target="_blank">
+              <Mail />
             </a>
-            <a href="">
-              <FaXTwitter />
+            <a href="https://www.threads.net/@theokode" target="_blank">
+              <FaThreads />
             </a>
           </div>
         </div>

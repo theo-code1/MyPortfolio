@@ -26,7 +26,6 @@ const NavBar = ({ overviewRef, aboutRef, workRef }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-console.log(isPhoneMenuOpened)
 
 
   return (
