@@ -47,7 +47,7 @@ const NavBar = ({ overviewRef, aboutRef, workRef }) => {
         ${isScrolled ? 'pt-4 pb-2' : 'pt-6'} `}>
         <div className={`logo items-center ${isScrolled ? 'flex md:hidden' : 'flex'}`}>
             <img src={MyLogo} alt="theoKode Brand Logo" className='w-10 md:w-12 select-none' draggable='false' />
-            <h1 className='text-2xl font-switzer font-medium '>TheoKode</h1>
+            <h1 className='text-2xl font-switzer font-medium text-white mix-blend-difference'>TheoKode</h1>
         </div>
 
         <ul className={`hidden md:flex items-center md:gap-8 lg:gap-16 text-[16px] font-switzer font-medium px-4 lg:px-8 py-2 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-black)] border border-black/10 ${isScrolled ? 'mx-auto bg-white/50 backdrop-blur-sm' : 'bg-white'}`}>
@@ -60,7 +60,7 @@ const NavBar = ({ overviewRef, aboutRef, workRef }) => {
         <Link to={'/contact'} className={`hidden md:flex bg-primary-blue brightness-105 hover:brightness-95 shadow-[0_4px_10px_0_var(--color-shadow-black)] hover:shadow-[0_2px_10px_0_var(--color-shadow-black-02)] transition-all duration-200 px-4 lg:px-8 py-3 rounded-xl text-[16px] text-white font-switzer font-medium cursor-pointer ${isScrolled ? 'md:hidden' : 'flex'}`}>Let's Connect</Link>
         
         {/* <h1  className='flex md:hidden text-3xl font-bold z-[99]'>X</h1> */}
-        <Menu onClick={() => setIsPhoneMenuOpened(!isPhoneMenuOpened)} className='flex md:hidden text-4xl' />
+        <Menu onClick={() => setIsPhoneMenuOpened(!isPhoneMenuOpened)} className='flex md:hidden text-4xl text-white mix-blend-difference' />
 
         <PhoneMenu overviewRef={overviewRef} aboutRef={aboutRef} workRef={workRef} 
           isPhoneMenuOpened={isPhoneMenuOpened} setIsPhoneMenuOpened={setIsPhoneMenuOpened}

@@ -44,7 +44,7 @@ const OfferSection = () => {
   };
 
   return (
-    <section className="h-screen max-w-screen font-switzer flex flex-col gap-16 items-centeroverflow-x-hidden px-16 my-16">
+    <section className="h max-w-screen font-switzer flex flex-col gap-16 items-centeroverflow-x-hidden px-4 md:px-16 my-16 border ">
       <motion.div
         variants={variants}
         initial="hidden"
@@ -53,13 +53,13 @@ const OfferSection = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="headlines flex flex-col items-center gap-4 ">
-          <h1 className="text-5xl text-center text-black font-semibold">
+          <h1 className="text-4xl md:text-5xl text-center text-black font-semibold">
             What I Offer ?
           </h1>
-          <p className="text-black/75 text-lg text-center">
+          <p className="text-black/75 text-[16px] md:text-lg text-center">
             Comprehensive web development services focused on creating
             exceptional
-            <br />
+            <br className="hidden md:flex"/>
             digital experiences
           </p>
         </div>
@@ -72,7 +72,7 @@ const OfferSection = () => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="offerCards relative w-fit flex gap-12 pt-8 mx-auto ">
+        <div className="offerCards max-w-screen relative w-fit flex flex-col md:flex-row gap-12 pt-8 mx-auto overflow-hidden ">
           <OfferCard
             IconChild={
               <CodeIcon className="text-[68px] p-3 bg-[#2759EF] brightness-110 text-white rounded-2xl" />
@@ -126,7 +126,7 @@ export const OfferCard = ({ IconChild, OfferTitle, OfferDesc, skillsBackground, 
 
 
   return (
-    <article className='relative font-switzer w-[450px] h-[ px-8 pt-16 pb-6 rounded-xl bg-white  flex flex-col gap- items-center justify-between border border-black/20 shadow-[0_2px_24px_0_var(--color-shadow-black)] hover:shadow-[0_4px_32px_0_var(--color-shadow-black)] transition-all duration-200 cursor-pointer'>
+    <article className='relative font-switzer w-[90dvw] md:w-[450px] px-6 md:px-8 pt-16 pb-6 rounded-xl bg-white  flex flex-col gap- items-center justify-between border border-black/20 shadow-[0_2px_24px_0_var(--color-shadow-black)] hover:shadow-[0_4px_32px_0_var(--color-shadow-black)] transition-all duration-200 cursor-pointer'>
         <div className="offer-icon absolute -top-8 left-1/2 -translate-x-1/2 w-20 "
         >
             {IconChild}
