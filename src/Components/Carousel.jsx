@@ -1,8 +1,9 @@
+import React, { useState, useEffect } from "react";
 
-import Project1 from '../assets/project01.webp'
-import Project2 from '../assets/project02.webp'
-import Project3 from '../assets/project03.webp'
-import Project4 from '../assets/project04.webp'
+import Project1 from "../assets/project01.webp";
+import Project2 from "../assets/project02.webp";
+import Project3 from "../assets/project03.webp";
+import Project4 from "../assets/project04.webp";
 
 const images = [
   { src: Project1, alt: "Project 03" },
@@ -13,14 +14,28 @@ const images = [
 
 const ImageCarousel = () => {
   const imageList = [...images, ...images];
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Function to check screen size
+  const checkScreenSize = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+
+  useEffect(() => {
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   return (
     <div
       className="w-full overflow-hidden opacity-0 animate-opacity transition-all duration-200"
       style={{
-        '--animDelay': '2s',
-        maskImage: "linear-gradient(to right, transparent, white 5%, white 90%, transparent)",
-        WebkitMaskImage: "linear-gradient(to right, transparent, white 5%, white 90%, transparent)",
+        "--animDelay": isMobile ? '0' : "2s",
+        maskImage:
+          "linear-gradient(to right, transparent, white 5%, white 90%, transparent)",
+        WebkitMaskImage:
+          "linear-gradient(to right, transparent, white 5%, white 90%, transparent)",
       }}
     >
       <div className="flex w-max animate-infinite-scroll hover:[animation-duration: 100]">

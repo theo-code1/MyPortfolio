@@ -17,6 +17,19 @@ const NavBar = ({ overviewRef, aboutRef, workRef }) => {
   const scrollDirection = useScrollDirection();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isPhoneMenuOpened, setIsPhoneMenuOpened] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
+  
+    // Function to check screen size
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+  
+    useEffect(() => {
+      checkScreenSize();
+      window.addEventListener("resize", checkScreenSize);
+      return () => window.removeEventListener("resize", checkScreenSize);
+    }, []);
+    
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +42,7 @@ const NavBar = ({ overviewRef, aboutRef, workRef }) => {
 
 
   return (
-    <nav className={`flex items-center justify-between md:gap-4 px-4 md:px-8 lg::px-20 backdrop-blur-2xl md:backdrop-blur-none rounded fixed top-0 left-0 w-full z-50 transition-all duration-400 animate-none md:animate-nav
+    <nav className={`flex items-center justify-between md:gap-4 px-4 md:px-8 lg::px-20 backdrop-blur-2xl md:backdrop-blur-none rounded fixed top-0 left-0 w-full z-50 transition-all duration-400 ${!isMobile && 'animate-nav'}
         ${scrollDirection === 'down' ? '-translate-y-32' : 'translate-y-0'}
         ${isScrolled ? 'pt-4 pb-2' : 'pt-6'} `}>
         <div className={`logo items-center ${isScrolled ? 'flex md:hidden' : 'flex'}`}>
