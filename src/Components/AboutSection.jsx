@@ -31,7 +31,7 @@ const AboutSection = ({ aboutRef }) => {
     <section
       ref={aboutRef}
       id="about"
-      className="max-w-screen font-switzer flex flex-col md:flex-row md:items-center justify-between pl-8 md:pl-12 lg:pl-48 pr-8 md:pr-12 lg:pr-40 pt-12 md:pt-24 pb-16 md:pb-32 overflow-x-hidden "
+      className="max-w-screen font-switzer flex flex-col md:flex-row md:items-center justify-between pl-8 md:pl-12 lg:pl-48 pr-8 md:pr-12 lg:pr-40 pt-12 md:pt-24 pb-16 md:pb-32 overflow-hidden "
     >
       <div className="content-side w-full lg:w-[52%] flex flex-col gap-4 md:gap-8  ">
         <motion.div

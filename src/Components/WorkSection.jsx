@@ -45,32 +45,20 @@ const WorkSection = ({ workRef }) => {
     <section
       ref={workRef}
       id="work"
-      className="min-h-[200dvh] max-w-screen flex flex-col gap-16 bg-black overflow-x-hidden relative px-42 py-24 font-switzer "
+      className="min-h-[200dvh] max-w-screen flex flex-col gap-16 bg-black relative px-4 md:px-8 lg:px-42 py-12 md:py-24 font-switzer overflow-hidden"
     >
-      {/* <motion.div
-        variants={variants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      > */}
+
         <div className="headers flex flex-col gap-8">
-          <div className="work-label relative flex items-center gap-2 w-fit pl-1.5 pr-8 py-1 rounded-full z-20 shadow-[inset_0_0_15px_2px_rgba(255,255,255,0.1)] shadow-[inset_0_2px_8px_rgba(255,255,255,0.15)  inset-shadow-white inset-shadow-2xs inset-shadow- bg-white/10 backdrop-blur-sm border border-white/20">
-            <GlobalIcon className="text-white/90 text-4xl" />
-            <h2 className="text-white/90 text-2xl font-[400]">Work</h2>
+          <div className="work-label relative flex items-center gap-2 w-fit pl-1.5 pr-6 md:pr-8 py-1 rounded-full z-20 shadow-[inset_0_0_15px_2px_rgba(255,255,255,0.1)] shadow-[inset_0_2px_8px_rgba(255,255,255,0.15)  inset-shadow-white inset-shadow-2xs inset-shadow- bg-white/10 backdrop-blur-sm border border-white/20">
+            <GlobalIcon className="text-white/90 text-3xl md:text-4xl" />
+            <h2 className="text-white/90 text-xl md:text-2xl font-[400]">Work</h2>
           </div>
           <h3 className="text-[16px] text-white/90 font-medium">
             Developed sleek, visually stunning and high-performance websites
-            using <br /> different technology like React.js and Tailwind CSS
+            using <br className="hidden md:flex" /> different technology like React.js and Tailwind CSS
           </h3>
         </div>
-       {/* </motion.div> */}
       <div className="work-articles relative flex flex-col gap-16 mb-8 ">
-      {/* <motion.div
-        variants={variants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      > */}
           <WorkArticle
             websiteRole={websitesInfo[0].role}
             websiteDesc={websitesInfo[0].desc}
@@ -79,13 +67,6 @@ const WorkSection = ({ workRef }) => {
             websiteImg={websitesInfo[0].websiteImg}
             websiteAlt={websitesInfo[0].websiteAlt}
           />
-        {/* </motion.div>
-        <motion.div
-          variants={variants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        > */}
           <WorkArticle
             websiteRole={websitesInfo[1].role}
             websiteDesc={websitesInfo[1].desc}
@@ -94,7 +75,6 @@ const WorkSection = ({ workRef }) => {
             websiteImg={websitesInfo[1].websiteImg}
             websiteAlt={websitesInfo[1].websiteAlt}
             />
-        {/* </motion.div> */}
       </div>
 
       <Link to={'/my-work'} className="text-xl text-white/90 flex items-center gap-2 hover:gap-4 px-8 py-4 rounded-xl brightness-110 bg-white/15 w-fit text-center mx-auto transition-all duration-200 " > 

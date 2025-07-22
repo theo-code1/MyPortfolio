@@ -43,9 +43,11 @@
 /* body {
   font-family: 'switzer', sans-serif;
 } */
-html {
+body, html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
+
 
 
 @font-face {

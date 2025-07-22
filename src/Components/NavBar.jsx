@@ -39,10 +39,22 @@ const NavBar = ({ overviewRef, aboutRef, workRef }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isPhoneMenuOpened) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    // Clean up in case component unmounts while menu is open
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isPhoneMenuOpened]);
+
 
 
   return (
-    <nav className={`bg-white/80 flex items-center justify-between md:gap-4 px-4 md:px-8 lg:px-20 backdrop-blur-2xl md:backdrop-blur-none rounded fixed top-0 left-0 w-full z-50 transition-all duration-400 ${!isMobile && 'animate-nav'}
+    <nav className={`bg-white/80 flex items-center justify-between md:gap-4 px-4 md:px-8 lg:px-20 backdrop-blur-2xl md:backdrop-blur-none rounded fixed top-0 left-0 w-full z-50 transition-all duration-400 overflow-hidden ${!isMobile && 'animate-nav'}
         ${scrollDirection === 'down' ? '-translate-y-32' : 'translate-y-0'}
         ${isScrolled ? 'pt-4 pb-2' : 'pt-6'} `}>
         <div className={`logo items-center ${isScrolled ? 'flex md:hidden' : 'flex'}`}>

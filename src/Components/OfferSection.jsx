@@ -44,7 +44,7 @@ const OfferSection = () => {
   };
 
   return (
-    <section className="h max-w-screen font-switzer flex flex-col gap-16 items-centeroverflow-x-hidden px-4 md:px-16 my-16 ">
+    <section className="h max-w-screen font-switzer flex flex-col gap-16 items-centeroverflow-x-hidden px-4 md:px-0 lg:px-16 my-16 overflow-hidden ">
       <motion.div
         variants={variants}
         initial="hidden"
@@ -72,7 +72,7 @@ const OfferSection = () => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="offerCards max-w-screen relative w-fit flex flex-col md:flex-row gap-12 pt-8 mx-auto overflow-hidden ">
+        <div className="offerCards max-w-screen relative w-fit flex flex-col md:flex-row md:justify-center md:flex-wrap gap-12 md:gap-x-4 pt-8 mx-auto overflow-hidden ">
           <OfferCard
             IconChild={
               <CodeIcon className="text-[68px] p-3 bg-[#2759EF] brightness-110 text-white rounded-2xl" />
@@ -126,7 +126,7 @@ export const OfferCard = ({ IconChild, OfferTitle, OfferDesc, skillsBackground, 
 
 
   return (
-    <article className='relative font-switzer w-[90dvw] md:w-[450px] px-6 md:px-8 pt-16 pb-6 rounded-xl bg-white  flex flex-col gap-4 md:gap-8 items-center justify-between border border-black/20 shadow-[0_2px_24px_0_var(--color-shadow-black)] hover:shadow-[0_4px_32px_0_var(--color-shadow-black)] transition-all duration-200 cursor-pointer'>
+    <article className='relative font-switzer w-[90dvw] md:w-[400px] px-6 md:px-6 lg:px-8 pt-16 pb-6 rounded-xl bg-white  flex flex-col gap-4 md:gap-8 items-center justify-between border border-black/20 shadow-[0_2px_24px_0_var(--color-shadow-black)] hover:shadow-[0_4px_32px_0_var(--color-shadow-black)] transition-all duration-200 cursor-pointer'>
         <div className="offer-icon absolute -top-8 left-1/2 -translate-x-1/2 w-20 "
         >
             {IconChild}
