@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import Project1 from "../assets/project01.webp";
-import Project2 from "../assets/project02.webp";
-import Project3 from "../assets/project03.webp";
+import Project1 from "../assets/Project01.webp";
+import Project2 from "../assets/Project02.webp";
+import Project3 from "../assets/Project03.webp";
 import Project4 from "../assets/project04.webp";
 
 const images = [
