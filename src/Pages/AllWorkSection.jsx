@@ -25,7 +25,7 @@ const AllWorkSection = () => {
         'Optimized React development',
         'Fast, responsive layout',
       ],
-      websiteLink: '#',
+      websiteLink: 'https://uivio-board.vercel.app/',
       websiteImg: UivioProject,
       websiteAlt: 'uivio website (clipboard search)',
       category: 'Landing Page'
@@ -64,7 +64,7 @@ const AllWorkSection = () => {
         'Branding',
         'Engagement',
       ],
-      websiteLink: '#',
+      websiteLink: 'https://starbucks-product.vercel.app/',
       websiteImg: Project01,
       websiteAlt: 'E-commerce store website',
       category: 'Practice'
@@ -143,7 +143,7 @@ export const FilterBar = ({ currentFilter, setCurrentFilter}) => {
   console.log(currentFilter)
 
   return(
-    <ul className='flex items-center gap-3 '>
+    <ul className='flex items-center gap-3 select-none'>
       {filterItems.map((item, index) => (
         <li onClick={() => setCurrentFilter(item)} className={`${currentFilter === item ? 'bg-gradient-to-br from-white/40 from-[-40%] to-transparent' : '' } hover:bg-gradient-to-br from-white/20 from-[-40%] to-transparent backdrop-blur-lg text-lg text-white font-switzer font-medium px-4 py-1.5 border border-white/30 rounded-xl cursor-pointer transition-all duration-200 `} key={index}>{item}</li>
       ))}

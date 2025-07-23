@@ -12,7 +12,7 @@ const images = [
   { src: Project4, alt: "Project 04" },
 ];
 
-const ImageCarousel = () => {
+const Carousel = () => {
   const imageList = [...images, ...images];
   const [isMobile, setIsMobile] = useState(false);
 
@@ -58,4 +58,4 @@ const ImageCarousel = () => {
   );
 };
 
-export default ImageCarousel;
+export default Carousel;

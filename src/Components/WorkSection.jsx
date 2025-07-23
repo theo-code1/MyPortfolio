@@ -17,7 +17,7 @@ const WorkSection = ({ workRef }) => {
         "Optimized React development",
         "Fast, responsive layout",
       ],
-      websiteLink: "#",
+      websiteLink: "https://uivio-board.vercel.app/",
       websiteImg: UivioProject,
       websiteAlt: "uivio website (clipboard search)",
     },
