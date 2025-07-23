@@ -105,7 +105,9 @@ body, html {
   .animate-infinite-scroll {
     animation: infiniteScroll 50s linear infinite
   }
-  
+  .animate-status{
+    animation: animateStatus 3s ease-in-out forwards;
+  }
 }
 
 .animated-spans {
@@ -186,6 +188,27 @@ body, html {
     transform: translateX(-50%);
   }
 } 
+
+@keyframes animateStatus {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
 
 .projects-slide {
   overflow: hidden;

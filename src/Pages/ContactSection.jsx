@@ -26,11 +26,6 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  if (isMessageSent) {
-    setTimeout(() => {
-      setIsMessageSent(false);
-    }, 3000);
-  }
 
 
   const handleSubmit = async (e) => {
@@ -45,9 +40,10 @@ const Contact = () => {
         },
         body: JSON.stringify(formData),
       });
-  
+
       if (response.ok) {
         setIsMessageSent(true);
+        setTimeout(() => setIsMessageSent(false), 3000);
         
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
@@ -202,17 +198,19 @@ const Contact = () => {
           </form>
 
           {isMessageSent && (
-            <div className={`message-status absolute top-8 right-0 bg-white flex items-center gap-4 pl-6 pr-8 py-4 rounded-l-xl ${isMessageSent ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-200 `}>
-                <>
-                  <CheckCircle className='text-green-500 text-2xl' />
-                  <p className="text-xl font-switzer ">
+            <div className={`message-status fixed top-8 right-8 bg-white/90 flex items-center gap-16 pl-6 pr-4 py-3 rounded-xl ${isMessageSent ? 'animate-status' : 'animate-none'} transition-transform duration-200 `}>
+                <div className='flex  items-center gap-2'>
+                  <CheckCircle className='text-green-500 text-xl' />
+                  <p className="text-lg font-switzer font-medium text-black/90">
                     Message Sent !
                   </p>
-                </>
+                </div>
+                <Close />
             </div>
           )}
+
           {isError && (
-            <div className={`message-status absolute top-8 right-0 bg-white flex items-center gap-4 pl-6 pr-8 py-4 rounded-l-xl ${isError ? 'translate-x-0.5' : 'translate-full '} transition-transform duration-200`}>
+            <div className={`message-status absolute top-8 right-0 bg-white/90 flex items-center gap-4 pl-6 pr-8 py-4 rounded-xl ${isError ? 'animate-status' : 'animate-none '} transition-transform duration-200`}>
                 <>
                   <Close className='text-red-500 text-2xl' />
                   <p className={`text-xl font-switzer `} >
