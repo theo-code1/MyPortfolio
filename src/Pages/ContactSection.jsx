@@ -107,7 +107,7 @@ const Contact = () => {
             <a href="https://www.linkedin.com/in/theo-kode-0b35a632a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank">
               <FaLinkedinIn />
             </a>
-            <a href="mailto:codingbusiness99@gmail.com" target="_blank">
+            <a href="mailto:theokode01@gmail.com" target="_blank">
               <Mail />
             </a>
             <a href="https://www.threads.net/@theokode" target="_blank">

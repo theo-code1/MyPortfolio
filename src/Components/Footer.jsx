@@ -36,7 +36,7 @@ const Footer = ({ aboutRef, workRef}) => {
                 </ul>
                 <ul className='text-[15px] flex flex-col gap-2 text-white/80 font-[300]'>
                     <li className='text-lg text-white font-medium mb-2'>Contact</li>
-                    <li className='cursor-pointer'><a href='mailto:codingbusiness99@gmail.com' className='hover:text-white/70 transition-all duration-100' target='_blank'>Email Me </a></li>
+                    <li className='cursor-pointer'><a href='mailto:theokode01@gmail.com' className='hover:text-white/70 transition-all duration-100' target='_blank'>Email Me </a></li>
                     <li className='cursor-pointer'><a href='https://x.com/TheoKode_?t=Aeyn9E65s60T6on178qkMg&s=08' className='hover:text-white/70 transition-all duration-100' target='_blank' >Twitter </a></li>
                     <li className='cursor-pointer'><a href='https://www.linkedin.com/in/theo-kode-0b35a632a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' className='hover:text-white/70 transition-all duration-100' target='_blank'>LinkedIn </a></li>
                 </ul>
