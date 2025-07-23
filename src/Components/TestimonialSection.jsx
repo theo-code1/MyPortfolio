@@ -43,7 +43,7 @@ const TestimonialSection = () => {
           <h1 className='text-[1.8rem] md:text-[2rem] text-black font-semibold text-center'>What people say matters</h1>
           <p className='text-center text-sm text-black/50 '>Insights From People Who've Seen My Work in Action</p>
       </div>
-      <div className="testimonial-articles grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-2">
+      <div className="testimonial-articles grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 2xl:gap-8 px-2">
         {commentsInfo.map((comment, index) => (
           <TestimonialArticle 
             key={index}
@@ -75,7 +75,7 @@ export default TestimonialSection
 
 export const TestimonialArticle = ({ Img, name, userName, platform, message, stars, link }) => {
   return(
-    <article className='bg-[#EBEBEB]/20 flex flex-col gap-4 rounded-2xl h-fit p-4 border-2 border-black/30'>
+    <article className='relative bg-[#EBEBEB]/20 flex flex-col gap-4 rounded-2xl h-fit p-4 border-2 border-black/30 overflow-hidden'>
       <div className="header flex items-center justify-between ">
         <div className="profile flex items-center gap-2">
           <img src={Img} alt="" className='size-14 select-none' draggable='false' />

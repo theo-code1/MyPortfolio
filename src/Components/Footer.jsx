@@ -42,7 +42,7 @@ const Footer = ({ aboutRef, workRef}) => {
                 </ul>
             </div>
         </div>
-        <h1 className='text-[5rem] md:text-[10rem] lg:text-[16rem] text-white font-clash-display leading-[80%] absolute bottom-2 left-1/2 -translate-x-1/2'>TheoKode</h1>
+        <h1 className='text-[5rem] md:text-[10rem] lg:text-[16rem] 2xl:text-[18rem] text-center text-white font-clash-display leading-[80%] absolute bottom-2 left-1/2 -translate-x-1/2'>TheoKode</h1>
     </footer>
   )
 }

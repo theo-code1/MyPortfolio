@@ -62,7 +62,7 @@ const NavBar = ({ overviewRef, aboutRef, workRef }) => {
             <h1 className='text-xl md:text-2xl font-switzer font-medium '>TheoKode</h1>
         </div>
 
-        <ul className={`hidden md:flex items-center md:gap-8 lg:gap-16 text-[16px] font-switzer font-medium px-4 lg:px-8 py-2 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-black)] border border-black/10 ${isScrolled ? 'mx-auto bg-white/50 backdrop-blur-sm' : 'bg-white'}`}>
+        <ul className={`hidden md:flex items-center md:gap-8 lg:gap-16 text-[16px] font-switzer font-medium px-4 lg:px-8 py-2 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-black)] border border-black/10 ${isScrolled ? 'mx-auto bg-white/50 backdrop-blur-lg' : 'bg-white'}`}>
             <li onClick={() => scrollToSection(overviewRef)}  className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Overview</li>
             <li onClick={() => scrollToSection(aboutRef)}  className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>About</li>
             <li onClick={() => scrollToSection(workRef)}  className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Work</li>

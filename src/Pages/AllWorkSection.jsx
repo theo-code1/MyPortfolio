@@ -139,8 +139,6 @@ export default AllWorkSection
 export const FilterBar = ({ currentFilter, setCurrentFilter}) => {
 
   const filterItems = ['All', 'Landing Page', 'Web App', 'Portfolio', 'E-commerce', 'Practice']
- 
-  console.log(currentFilter)
 
   return(
     <ul className='flex items-center gap-3 select-none'>
