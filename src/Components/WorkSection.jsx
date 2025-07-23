@@ -45,7 +45,7 @@ const WorkSection = ({ workRef }) => {
     <section
       ref={workRef}
       id="work"
-      className="min-h-[200dvh] max-w-screen flex flex-col gap-16 bg-black relative px-4 md:px-8 lg:px-42 py-12 md:py-24 font-switzer overflow-hidden"
+      className="min-h-[] max-w-screen flex flex-col gap-16 bg-black relative px-4 md:px-8 lg:px-42 py-12 md:py-24 font-switzer overflow-hidden"
     >
 
         <div className="headers flex flex-col gap-8">

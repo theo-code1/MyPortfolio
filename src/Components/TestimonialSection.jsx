@@ -38,12 +38,12 @@ const TestimonialSection = () => {
   ]
 
   return (
-    <section className='bg-white max-w-screen flex flex-col items-center gap-16 py-24 font-switzer overflow-hidden '>
+    <section className='bg-white max-w-screen flex flex-col items-center gap-16 py-24 px-2 font-switzer overflow-hidden '>
       <div className="heading flex flex-col text-center gap-2">
-          <h1 className='text-[2rem] text-black font-semibold text-center'>What people say matters</h1>
+          <h1 className='text-[1.8rem] md:text-[2rem] text-black font-semibold text-center'>What people say matters</h1>
           <p className='text-center text-sm text-black/50 '>Insights From People Who've Seen My Work in Action</p>
       </div>
-      <div className="testimonial-articles grid grid-cols-3 gap-4 ">
+      <div className="testimonial-articles grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-2">
         {commentsInfo.map((comment, index) => (
           <TestimonialArticle 
             key={index}
@@ -78,7 +78,7 @@ export const TestimonialArticle = ({ Img, name, userName, platform, message, sta
     <article className='bg-[#EBEBEB]/20 flex flex-col gap-4 rounded-2xl h-fit p-4 border-2 border-black/30'>
       <div className="header flex items-center justify-between ">
         <div className="profile flex items-center gap-2">
-          <img src={Img} alt="" className='size-14' />
+          <img src={Img} alt="" className='size-14 select-none' draggable='false' />
           <div className="person-info flex flex-col gap-1">
             <h1 className='text-xl'>{name}</h1>
             <h3 className='text-sm text-black/50'>{userName}</h3>
@@ -88,7 +88,7 @@ export const TestimonialArticle = ({ Img, name, userName, platform, message, sta
           {platform === 'threads' && (<a href=''> <FaThreads className='text-4xl'/></a> )}
           {platform === 'linkedin' && (<a href=''> <FaLinkedinIn className='text-4xl'/></a> )}
       </div>
-      <p className='text-[16px] w-[420px]'>{message}</p>
+      <p className='text-[16px] w-full lg:w-[420px] mb-2 md:mb-0'>{message}</p>
 
       <div className="article-bottom flex items-center justify-between w-full">
         {stars === 5 && ( <img src={FiveStars} alt='Stars Rate' className='h-6 select-none' draggable='false' /> )}

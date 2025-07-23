@@ -54,7 +54,7 @@ const NavBar = ({ overviewRef, aboutRef, workRef }) => {
 
 
   return (
-    <nav className={`bg-white/80 flex items-center justify-between md:gap-4 px-4 md:px-8 lg:px-20 backdrop-blur-2xl md:backdrop-blur-none rounded fixed top-0 left-0 w-full z-50 transition-all duration-400 overflow-hidden ${!isMobile && 'animate-nav'}
+    <nav className={`bg-white/50 md:bg-transparent flex items-center justify-between md:gap-4 px-4 md:px-8 lg:px-20 backdrop-blur-2xl md:backdrop-blur-none rounded fixed top-0 left-0 w-full z-50 transition-all duration-400 ${!isMobile && 'animate-nav'}
         ${scrollDirection === 'down' ? '-translate-y-32' : 'translate-y-0'}
         ${isScrolled ? 'pt-4 pb-2' : 'pt-6'} `}>
         <div className={`logo items-center ${isScrolled ? 'flex md:hidden' : 'flex'}`}>
@@ -71,7 +71,6 @@ const NavBar = ({ overviewRef, aboutRef, workRef }) => {
 
         <Link to={'/contact'} className={`hidden md:flex bg-primary-blue brightness-105 hover:brightness-95 shadow-[0_4px_10px_0_var(--color-shadow-black)] hover:shadow-[0_2px_10px_0_var(--color-shadow-black-02)] transition-all duration-200 px-4 lg:px-8 py-3 rounded-xl text-[16px] text-white font-switzer font-medium cursor-pointer ${isScrolled ? 'md:hidden' : 'flex'}`}>Let's Connect</Link>
         
-        {/* <h1  className='flex md:hidden text-3xl font-bold z-[99]'>X</h1> */}
         <Menu onClick={() => setIsPhoneMenuOpened(!isPhoneMenuOpened)} className='flex md:hidden text-4xl ' />
 
         <PhoneMenu overviewRef={overviewRef} aboutRef={aboutRef} workRef={workRef} 
@@ -86,13 +85,13 @@ export default NavBar
 
 const PhoneMenu = ({ overviewRef, aboutRef, workRef, isPhoneMenuOpened, setIsPhoneMenuOpened }) => {
   return(
-    <div className={`menu w-screen flex md:hidden flex-col items-center gap-12 h-screen bg-white fixed top-0 left-0 z-50 pt-[20dvh] overflow-hidden  ${isPhoneMenuOpened ? 'translate-x-0' : 'translate-x-full' } transition-transform duration-300`}>
+    <div className={`menu w-screen min-h-screen flex md:hidden flex-col items-center gap-12 bg-white fixed top-0 left-0 z-[999] pt-[18dvh] overflow-x-hidden  ${isPhoneMenuOpened ? 'translate-x-0' : 'translate-x-full' } transition-transform duration-300`}>
       <div className="top-bar absolute top-0 left-0 pt-6 px-8 flex items-center justify-between w-full">
         <img src={MyLogo} alt="" className='w-12 object-contain select-none' draggable='false' />
         <Close onClick={() => setIsPhoneMenuOpened(false)} className='text-4xl rounded-2xl active:bg-gray-100 ' />
       </div>
 
-      <ul className={`flex flex-col items-center gap-4 mx-auto w-full text-xl font-switzer font-medium px-8 py-2`}>
+      <ul className={`flex flex-col items-center gap-4 mx-auto w-full text-xl font-switzer font-medium px-8 py-2 `}>
             <li onClick={() => {
               scrollToSection(overviewRef)
               setIsPhoneMenuOpened(false)

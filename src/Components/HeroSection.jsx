@@ -28,7 +28,7 @@ const HeroSection = ({ overviewRef, aboutRef, workRef }) => {
   }, []);
 
   return (
-    <section id="Overview" ref={overviewRef} className='h-max pt-10 md:pt-20 lg:pt-24 pb-12 px-2 max-w-screen overflow-x-hidden'>
+    <section id="Overview" ref={overviewRef} className='h-max pt-10 relative md:pt-20 lg:pt-24 pb-12 px-2 max-w-screen overflow-x-hidden'>
       <GridBackground className='absolute top-0 left-1/2 -translate-x-1/2 w-fit h-[95dvh] md:h-auto -z-10 animate-opacity'/>
       <NavBar overviewRef={overviewRef} aboutRef={aboutRef} workRef={workRef} />
 
