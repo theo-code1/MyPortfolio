@@ -29,7 +29,7 @@ const HeroSection = ({ overviewRef, aboutRef, workRef }) => {
 
   return (
     <section id="Overview" ref={overviewRef} className='h-max pt-10 relative md:pt-20 lg:pt-24 pb-12 px-2 max-w-screen overflow-x-hidden'>
-      <GridBackground className='absolute top-0 left-1/2 -translate-x-1/2 w-fit h-[95dvh] md:h-auto -z-10 animate-opacity mx-auto'/>
+      <GridBackground className='absolute top-0 left-1/2 -translate-x-1/2 w-fit h-screen md:h-auto -z-10 animate-opacity mx-auto'/>
       <NavBar overviewRef={overviewRef} aboutRef={aboutRef} workRef={workRef} />
 
       <div className="cta-content flex flex-col gap-6 text-center w-fit mx-auto mt-24">

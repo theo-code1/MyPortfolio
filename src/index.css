@@ -105,21 +105,7 @@ body, html {
   .animate-infinite-scroll {
     animation: infiniteScroll 50s linear infinite
   }
-  /* .animate-scroll-left {
-    animation: scroll-left 10s linear infinite;
-} */
-  /* .loop-item1{
-  animation-delay: calc(20s / 4 * (4 - 1) * -1);
-}
-.loop-item2{
-  animation-delay: calc(20s / 4 * (4 - 2) * -1);
-}
-.loop-item3{
-  animation-delay: calc(20s / 4 * (4 - 3) * -1);
-}
-.loop-item4 {
-  animation-delay: calc(20s / 4 * (4 - 4) * -1);
-}  */
+  
 }
 
 .animated-spans {

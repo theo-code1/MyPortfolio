@@ -47,7 +47,7 @@ const Carousel = () => {
                 alt={image.alt}
                 width={600}
                 height={400}
-                className="transition-opacity opacity-100 duration-100 select-none"
+                className="transition-opacity opacity-100 duration-100 select-none w-full"
                 draggable="false"
               />
             </div>

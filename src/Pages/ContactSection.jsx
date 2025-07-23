@@ -7,8 +7,13 @@ import { FaThreads } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import Mail from '../assets/Icons/Mail'
 import SendIcon from "../assets/Icons/SendIcon";
+import CheckCircle from '../assets/Icons/CheckCircle'
+import Close from '../assets/Icons/Close'
 
 const Contact = () => {
+
+  const [isMessageSent, setIsMessageSent] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -20,6 +25,13 @@ const Contact = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  if (isMessageSent) {
+    setTimeout(() => {
+      setIsMessageSent(false);
+    }, 3000);
+  }
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,10 +47,12 @@ const Contact = () => {
       });
   
       if (response.ok) {
-        alert("Message sent!");
+        setIsMessageSent(true);
+        
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
         alert("Error sending message.");
+        setIsError(true);
       }
     } catch (err) {
       console.error(err);
@@ -48,7 +62,7 @@ const Contact = () => {
   
 
   return (
-    <section className="bg-black h-screen max-w-screen flex flex-col gap-16 pt-6 px-36">
+    <section className="relative bg-black h-screen max-w-screen flex flex-col gap-16 pt-6 px-36">
       <ul
         className={`w-fit mx-auto text-white/90 px-8 py-2 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-white)] border border-white/30 flex items-center gap-16 text-[16px] font-switzer font-medium `}
       >
@@ -105,6 +119,8 @@ const Contact = () => {
             </a>
           </div>
         </div>
+
+
         <div className="form-content w-1/2 pl-24 ">
           <form
             onSubmit={handleSubmit}
@@ -184,6 +200,28 @@ const Contact = () => {
               </span>
             </button>
           </form>
+
+          {isMessageSent && (
+            <div className={`message-status absolute top-8 right-0 bg-white flex items-center gap-4 pl-6 pr-8 py-4 rounded-l-xl ${isMessageSent ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-200 `}>
+                <>
+                  <CheckCircle className='text-green-500 text-2xl' />
+                  <p className="text-xl font-switzer ">
+                    Message Sent !
+                  </p>
+                </>
+            </div>
+          )}
+          {isError && (
+            <div className={`message-status absolute top-8 right-0 bg-white flex items-center gap-4 pl-6 pr-8 py-4 rounded-l-xl ${isError ? 'translate-x-0.5' : 'translate-full '} transition-transform duration-200`}>
+                <>
+                  <Close className='text-red-500 text-2xl' />
+                  <p className={`text-xl font-switzer `} >
+                    There was an error sending your message. Please try again.
+                  </p>
+                </>
+            </div>
+          )}
+          
         </div>
       </div>
     </section>
