@@ -12,7 +12,7 @@ import Close from '../assets/Icons/Close'
 
 const Contact = () => {
 
-  const [isMessageSent, setIsMessageSent] = useState(true);
+  const [isMessageSent, setIsMessageSent] = useState(false);
   const [isError, setIsError] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -96,11 +96,11 @@ const Contact = () => {
           <h2 className="text-[26px] mb-2 order-3">
             I will Respond To Your Message Within 24 Hours
           </h2>
-          <p className="text-lg mb-8 hidden lg:flex">
+          <p className="text-lg mb-8 hidden lg:flex order-4">
             I'm excited to hear about your project! Get in touch via
             <br className="hidden md:flex"/> the form on the side—let's start the conversation.
           </p>
-          <div className="social-media flex items-center gap-8 text-3xl absolute bottom-12 md:bottom-14 left-1/2 -translate-x-1/2 z-10">
+          <div className="social-media flex order-5 items-center gap-8 text-3xl absolute bottom-12 md:bottom-14 left-1/2 -translate-x-1/2 lg:relative lg:top-0 lg:left-0 lg:translate-x-0 z-10">
             <a href="https://x.com/TheoKode_?t=Aeyn9E65s60T6on178qkMg&s=08" target="_blank">
               <FaXTwitter />
             </a>
