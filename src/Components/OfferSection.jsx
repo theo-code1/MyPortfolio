@@ -72,7 +72,7 @@ const OfferSection = () => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="offerCards max-w-screen relative w-fit flex flex-col md:flex-row md:justify-center md:flex-wrap gap-12 md:gap-x-4 lg:gap-8 pt-8 mx-auto overflow-hidden ">
+        <div className="offerCards max-w-screen relative w-fit flex flex-col md:flex-row md:justify-center md:flex-wrap lg:flex-nowrap gap-12 md:gap-x-4 lg:gap-8 pt-8 mx-auto overflow-hidden ">
           <OfferCard
             IconChild={
               <CodeIcon className="text-[68px] p-3 bg-[#2759EF] brightness-110 text-white rounded-2xl" />
