@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useRef, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router';
 
@@ -20,12 +21,7 @@ function App() {
   const aboutRef = useRef(null);
   const workRef = useRef(null);
   
-  // Check if dark mode is preferred
-  // const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const [isDarkMode, setIsDarkMode] = useState(false);
-  
-  // Check if light mode is preferred
-  // const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches;
   
   useEffect(() => {
     // Function to update the favicon based on theme
