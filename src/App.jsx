@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router';
 
 import HeroSection from './Components/HeroSection';
@@ -9,6 +9,10 @@ import AllWorkSection from './Pages/AllWorkSection';
 import ContactSection from './Pages/ContactSection';
 import TestimonialSection from './Components/TestimonialSection';
 import Footer from './Components/Footer';
+import MyLogoLight from './assets/MyLogoLight.svg'
+import MyLogo from './assets/MyLogo.svg'
+
+
 
 
 function App() {
@@ -16,6 +20,44 @@ function App() {
   const aboutRef = useRef(null);
   const workRef = useRef(null);
   
+  // Check if dark mode is preferred
+  // const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  
+  // Check if light mode is preferred
+  // const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches;
+  
+  useEffect(() => {
+    // Function to update the favicon based on theme
+    const updateFavicon = (isDark) => {
+      const favicon = document.getElementById('favicon');
+      if (isDark) {
+        favicon.href = MyLogoLight;
+      } else {
+        favicon.href = MyLogo;
+      }
+    };
+
+    // Check initial theme
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDarkMode(darkModeMediaQuery.matches);
+    updateFavicon(darkModeMediaQuery.matches);
+
+    // Listen for theme changes
+    const handleChange = (e) => {
+      setIsDarkMode(e.matches);
+      updateFavicon(e.matches);
+    };
+
+    // Add listener
+    darkModeMediaQuery.addListener(handleChange);
+
+    // Cleanup
+    return () => darkModeMediaQuery.removeListener(handleChange);
+  }, []);
+
+  // Rest of your component...
+
 
   return (
     <BrowserRouter>
