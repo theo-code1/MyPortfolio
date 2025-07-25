@@ -9,7 +9,7 @@ const Footer = ({ aboutRef, workRef}) => {
     
 
   return (
-    <footer className='relative h-[90dvh] md:h-[60dvh] lg:h-[70dvh] bg-black font-switzer flex flex-col items-center px-4 md:px-16 lg:px-48 pt-12 md:pt-26 overflow-hidden'>
+    <footer className='relative h-screen md:h-[60dvh] lg:h-[70dvh] bg-black font-switzer flex flex-col items-center px-4 md:px-16 lg:px-48 pt-12 md:pt-26 overflow-hidden'>
         <div className="first-column flex flex-col md:flex-row items-center md:items-start justify-between w-full gap-8 md:gap-auto mb-8 md:mb-16">
             <div className="logo flex flex-col items-center md:items-start gap-2">
                 <img src={Logo} alt="Brand Logo" className='w-32 md:w-36 ' />
