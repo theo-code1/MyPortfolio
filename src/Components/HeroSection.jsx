@@ -60,7 +60,7 @@ const HeroSection = ({ overviewRef, aboutRef, workRef }) => {
             </h1>
           )}
         </div>
-        <h3 className={`text-sm md:text-xl font-switzer text-dark-blue mb-8 ${!isMobile && 'animate-poop'} [--delay:0.5] lg:[--delay:1.2]`}  >Never miss a note, an idea, or a connection again—stay organized, inspired,<br className="hidden md:flex" /> and effortlessly connected every step of the way.</h3>
+        <h1 className={`text-sm md:text-xl font-switzer text-dark-blue mb-8 ${!isMobile && 'animate-poop'} [--delay:0.5] lg:[--delay:1.2]`}  >Never miss a note, an idea, or a connection again—stay organized, inspired,<br className="hidden md:flex" /> and effortlessly connected every step of the way.</h1>
         <div className={`cta-buttons flex items-center gap-3 md:gap-6 mx-auto ${!isMobile && 'animate-position-opacity'}`}>
             <Link to={'/my-work'} className='flex items-center gap-2 px-4 md:px-8 py-3 md:py-4 bg-white border-[1.5px] border-black rounded-xl font-switzer font-medium text-[16px] md:text-lg hover:shadow-[0_2px_20px_0_var(--color-shadow-black)] cursor-pointer transition-all duration-200 group'>See Projects <SeeArrow className='text-2xl group-hover:translate-x-2  transition-all duration-200' /></Link>
             <Link to={'/contact'} className='flex items-center gap-2 px-4 md:px-8 py-3 md:py-4 bg-primary-blue text-white rounded-xl font-switzer font-medium text-[16px] md:text-lg hover:brightness-95 active:brightness-80 transition-all duration-200 cursor-pointer group' >Start Your Project <GoArrow className='text-2xl group-hover:translate-x-2 group-hover:-translate-y-1 group-hover:scale-[1.1] transition-all duration-200'/></Link>
