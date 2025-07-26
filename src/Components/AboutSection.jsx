@@ -6,8 +6,8 @@ import { Link } from "react-router";
 
 import CheckCircle from "../assets/Icons/CheckCircle";
 import RightArrow from "../assets/Icons/RightArrow";
-// import ProfileImg from "../assets/ProfileImg.webp";
-import ProfileImg from "../assets/Personal-Profile.webp";
+import ProfileImg from "../assets/ProfileImg.webp";
+// import ProfileImg from "../assets/Personal-Profile.webp";
 
 const variants = {
   hidden: { opacity: 0, y: 20 },
