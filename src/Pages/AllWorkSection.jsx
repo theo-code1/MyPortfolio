@@ -101,12 +101,12 @@ const AllWorkSection = () => {
         <div className="headers flex flex-col gap-8">
           <div className="work-label relative flex items-center gap-2 w-fit pl-1.5 pr-8 py-1 rounded-full z-20 shadow-[inset_0_0_15px_2px_rgba(255,255,255,0.1)] shadow-[inset_0_2px_8px_rgba(255,255,255,0.15)  inset-shadow-white inset-shadow-2xs bg-white/10 backdrop-blur-sm border border-white/20">
             <GlobalIcon className="text-white/90 text-4xl" />
-            <h2 className="text-white/90 text-2xl font-[400] font-switzer">Work</h2>
+            <h1 className="text-white/90 text-2xl font-[400] font-switzer">Work</h1>
           </div>
-          <h3 className="text-lg text-white/90 font-medium font-switzer">
+          <h2 className="text-lg text-white/90 font-medium font-switzer">
             Developed sleek, visually stunning and high-performance websites
             using <br /> different technology like React.js and Tailwind CSS
-          </h3>
+          </h2>
         </div>
         <div className="filter-bar">
           <FilterBar currentFilter={currentFilter} setCurrentFilter={setCurrentFilter} />

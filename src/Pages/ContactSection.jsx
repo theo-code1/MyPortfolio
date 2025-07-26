@@ -88,9 +88,9 @@ const Contact = () => {
         <div className="contact-info  flex flex-col gap-4 text-white/90">
           <div className="work-label relative flex order-1 items-center gap-4 w-fit pl-1 md:pl-1.5 pr-6 md:pr-8 py-1 md:py-2 mb-4 md:mb-12 rounded-full z-20 shadow-[inset_0_0_15px_2px_rgba(255,255,255,0.1)] shadow-[inset_0_2px_8px_rgba(255,255,255,0.15)  inset-shadow-white inset-shadow-2xs bg-white/10 backdrop-blur-sm border border-white/20">
             <div className="dot size-2 bg-white/90 rounded-full ml-2"></div>
-            <h2 className="text-white/90 text-lg md:text-xl font-[400] font-switzer">
+            <span className="text-white/90 text-lg md:text-xl font-[400] font-switzer">
               Contact
-            </h2>
+            </span>
           </div>
           <h1 className="text-[34px] order-2">Get In Touch.</h1>
           <h2 className="text-[26px] mb-2 order-3">
