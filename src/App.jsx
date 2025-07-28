@@ -66,7 +66,7 @@ function App() {
               <AboutSection aboutRef={aboutRef} />
               <OfferSection />
               <WorkSection workRef={workRef} />
-              <TestimonialSection />
+              {/* <TestimonialSection /> */}
               <Footer aboutRef={aboutRef} workRef={workRef} />
             </>
           }
