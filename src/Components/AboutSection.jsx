@@ -66,7 +66,7 @@ const AboutSection = ({ aboutRef }) => {
               I&apos;m a web developer based in Morocco, passionate about
               creating clean, responsive websites that help businesses grow.
             </p>
-            <p className="text-lg text-black/75">
+            <p className="text-[16px] md:text-lg text-black/75">
               Whether it&apos;s building an online presence for a local startup
               or refining the user experience for an established brand, I focus
               on purposeful design and real results.
