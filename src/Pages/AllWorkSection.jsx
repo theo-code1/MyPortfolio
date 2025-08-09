@@ -127,7 +127,7 @@ const AllWorkSection = () => {
             using <br className="hidden md:flex" /> different technology like React.js and Tailwind CSS
           </h2>
         </div>
-        <div className="filter-bar w-max overflow-x-scroll border border-white">
+        <div className="filter-bar w-max overflow-x-scroll">
           <FilterBar currentFilter={currentFilter} setCurrentFilter={setCurrentFilter} />
         </div>
 

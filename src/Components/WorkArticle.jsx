@@ -21,7 +21,7 @@ const WorkArticle = ({
     <article className="w-full h- relative flex flex-col lg:flex-row rounded-2xl overflow-hidden font-switzer ">
       <div className="content-side relative h-full w-full bg-light-black text-white pl-6 md:pl-12 lg:pl-16 pr-4 md:pr-12 lg:pr-[60%] pt-8 md:pt-12 lg:pt-24 pb-8 md:pb-12 lg:pb-28 flex flex-col order-2 lg:order-1 gap-4 rounded-l-2xl">
         {CategoryLabel && (
-          <div className="flex items-center gap-2 absolute left-16 top-8 border border-primary-blue text-sm px-4 py-1.5 rounded-xl">
+          <div className="flex items-center gap-2 absolute right-4 top-6 md:left-16 md:top-8 border border-primary-blue text-sm px-4 py-1.5 rounded-xl">
             <div className="dot bg-primary-blue/80 size-2 rounded-full"></div>
             <span>{CategoryLabel}</span>
           </div>
