@@ -82,12 +82,13 @@ const NavBar = ({ overviewRef, aboutRef, workRef }) => {
 
 export default NavBar
 
+export const PhoneMenu = ({ overviewRef, aboutRef, workRef, isPhoneMenuOpened, setIsPhoneMenuOpened }) => {
+  
 
-const PhoneMenu = ({ overviewRef, aboutRef, workRef, isPhoneMenuOpened, setIsPhoneMenuOpened }) => {
   return(
-    <div className={`menu w-screen min-h-screen flex md:hidden flex-col items-center gap-12 bg-white fixed top-0 left-0 z-[999] pt-[18dvh] overflow-x-hidden  ${isPhoneMenuOpened ? 'translate-x-0' : 'translate-x-full' } transition-transform duration-300`}>
-      <div className="top-bar absolute top-0 left-0 pt-6 px-8 flex items-center justify-between w-full">
-        <img src={MyLogo} alt="" className='w-12 object-contain select-none' draggable='false' />
+    // {isPhoneMenuOpened && (
+    <div className={`fixed top-0 left-0 w-full h-screen bg-white z-50 flex flex-col items-center justify-center gap-8 md:hidden ${isPhoneMenuOpened ? 'translate-x-0' : 'translate-x-full'} transition-all duration-300`}>
+        <div className='absolute top-6 right-'>
         <Close onClick={() => setIsPhoneMenuOpened(false)} className='text-4xl rounded-2xl active:bg-gray-100 ' />
       </div>
 
@@ -113,5 +114,6 @@ const PhoneMenu = ({ overviewRef, aboutRef, workRef, isPhoneMenuOpened, setIsPho
         <Link to={'/contact'} className={`flex md:hidden w-fit bg-primary-blue brightness-105 active:brightness-95 shadow-[0_4px_10px_0_var(--color-shadow-black)] active:shadow-[0_2px_10px_0_var(--color-shadow-black-02)] transition-all duration-200 px-8 py-3 rounded-xl text-lg text-white font-switzer font-medium `}>Let's Connect</Link>
 
     </div>
+  // )}
   )
 }

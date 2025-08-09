@@ -51,7 +51,7 @@ const WorkSection = ({ workRef }) => {
         <div className="headers flex flex-col gap-8">
           <div className="work-label relative flex items-center gap-2 w-fit pl-1.5 pr-6 md:pr-8 py-1 rounded-full z-20 shadow-[inset_0_0_15px_2px_rgba(255,255,255,0.1)] shadow-[inset_0_2px_8px_rgba(255,255,255,0.15)  inset-shadow-white inset-shadow-2xs inset-shadow- bg-white/10 backdrop-blur-sm border border-white/20">
             <GlobalIcon className="text-white/90 text-3xl md:text-4xl" />
-            <h2 className="text-white/90 text-xl md:text-2xl font-[400]">Work</h2>
+            <h1 className="text-white/90 text-xl md:text-2xl font-[400]">Work</h1>
           </div>
           <h3 className="text-[16px] text-white/90 font-medium">
             Developed sleek, visually stunning and high-performance websites

@@ -91,24 +91,43 @@ const AllWorkSection = () => {
     : ProjectsInfo.filter(project => project.category === currentFilter);
 
   return (
-    <section className='bg-black min-h-screen pt-6 pb-12 px-42 flex flex-col gap-16'>
-        <ul className={`w-fit mx-auto text-white/90 px-8 py-2 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-white)] border border-white/30 flex items-center gap-16 text-[16px] font-switzer font-medium `}>
-            <Link to={'/'}><li className='cursor-pointer px-2 py-1 transition-all duration-200'>Overview</li> </Link>
-            <Link to={'/'}><li className='cursor-pointer px-2 py-1 transition-all duration-200'>About</li> </Link>
-            <Link to={'/'}><li className='cursor-pointer px-2 py-1 transition-all duration-200'>Work</li> </Link>
-            <Link to={'/contact'} ><li className='cursor-pointer px-2 py-1 transition-all duration-200'>Contact</li></Link>
-        </ul>
+    // <section className='bg-black min-h-screen pt-6 pb-12 px-42 flex flex-col gap-16'>
+    <section className='relative bg-black h-auto lg:h-screen max-w-screen flex flex-col gap-8 lg:gap-16 pt-6 px-4 md:px-12 lg:px-36 pb-32 lg:pb-0 '>
+        <ul
+                className={`w-fit mx-auto text-white/90 px-8 py-2 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-white)] border border-white/30 flex items-center gap-4 md:gap-16 text-sm md:text-[16px] font-switzer font-medium `}
+              >
+                <Link to={"/"}>
+                  <li className="cursor-pointer px-2 py-1 transition-all duration-200">
+                    Overview
+                  </li>{" "}
+                </Link>
+                <Link to={"/"}>
+                  <li className="cursor-pointer px-2 py-1 transition-all duration-200">
+                    About
+                  </li>{" "}
+                </Link>
+                <Link to={"/"}>
+                  <li className="cursor-pointer px-2 py-1 transition-all duration-200">
+                    Work
+                  </li>{" "}
+                </Link>
+                <Link to={"/contact"}>
+                  <li className="cursor-pointer px-2 py-1 transition-all duration-200">
+                    Contact
+                  </li>
+                </Link>
+              </ul>
         <div className="headers flex flex-col gap-8">
-          <div className="work-label relative flex items-center gap-2 w-fit pl-1.5 pr-8 py-1 rounded-full z-20 shadow-[inset_0_0_15px_2px_rgba(255,255,255,0.1)] shadow-[inset_0_2px_8px_rgba(255,255,255,0.15)  inset-shadow-white inset-shadow-2xs bg-white/10 backdrop-blur-sm border border-white/20">
-            <GlobalIcon className="text-white/90 text-4xl" />
-            <h1 className="text-white/90 text-2xl font-[400] font-switzer">Work</h1>
+          <div className="work-label relative flex items-center gap-2 w-fit pl-1.5 pr-6 md:pr-8 py-1 rounded-full z-20 shadow-[inset_0_0_15px_2px_rgba(255,255,255,0.1)] shadow-[inset_0_2px_8px_rgba(255,255,255,0.15)  inset-shadow-white inset-shadow-2xs inset-shadow- bg-white/10 backdrop-blur-sm border border-white/20">
+            <GlobalIcon className="text-white/90 text-3xl md:text-4xl" />
+            <h1 className="text-white/90 text-xl md:text-2xl font-[400] font-switzer">Work</h1>
           </div>
-          <h2 className="text-lg text-white/90 font-medium font-switzer">
+          <h2 className="text-[16px] text-white/90 font-medium">
             Developed sleek, visually stunning and high-performance websites
-            using <br /> different technology like React.js and Tailwind CSS
+            using <br className="hidden md:flex" /> different technology like React.js and Tailwind CSS
           </h2>
         </div>
-        <div className="filter-bar">
+        <div className="filter-bar w-max overflow-x-scroll border border-white">
           <FilterBar currentFilter={currentFilter} setCurrentFilter={setCurrentFilter} />
         </div>
 
