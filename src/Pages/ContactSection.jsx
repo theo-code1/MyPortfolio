@@ -60,7 +60,7 @@ const Contact = () => {
   return (
     <section className="relative bg-black h-auto lg:h-screen max-w-screen flex flex-col gap-8 lg:gap-16 pt-6 px-4 md:px-12 lg:px-36 pb-32 lg:pb-0 ">
       <ul
-        className={`w-fit mx-auto text-white/90 px-8 py-2 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-white)] border border-white/30 flex items-center gap-4 md:gap-16 text-sm md:text-[16px] font-switzer font-medium `}
+        className={`w-fit mx-auto text-white/90 px-4 py-2 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-white)] border border-white/30 flex items-center gap-4 md:gap-16 text-sm md:text-[16px] font-switzer font-medium `}
       >
         <Link to={"/"}>
           <li className="cursor-pointer px-2 py-1 transition-all duration-200">

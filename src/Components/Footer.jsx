@@ -9,13 +9,13 @@ const Footer = ({ aboutRef, workRef}) => {
     
 
   return (
-    <footer className='relative h-[80dvh] md:h-[60dvh] lg:h-[70dvh] bg-black font-switzer flex flex-col items-center px-4 md:px-16 lg:px-48 pt-12 md:pt-26 overflow-hidden'>
-        <div className="first-column flex flex-col md:flex-row items-center md:items-start justify-between w-full gap-8 md:gap-auto mb-8 md:mb-16">
+    <footer className='relative h-fit md:h-[60dvh] lg:h-[70dvh] bg-black font-switzer flex flex-col items-center px-4 md:px-16 lg:px-48 pt-12 pb-24 md:pt-26 overflow-hidden border-t border-white/20'>
+        <div className="first-column flex flex-col md:flex-row items-center md:items-start justify-between w-full gap-12 md:gap-auto mb-8 md:mb-16">
             <div className="logo flex flex-col items-center md:items-start gap-2">
                 <img src={Logo} alt="Brand Logo" className='w-32 md:w-36 ' />
                 <span className='text-sm text-white/60 text-center'>Copyright 2025. All rights reserved.</span>
             </div>
-            <div className="resources flex gap-16 flex-wrap md:w-1/2 lg:w-auto">
+            <div className="resources flex justify-center md:justify-start gap-16 flex-wrap md:w-1/2 lg:w-auto">
                 <ul className='text-[15px] flex flex-col gap-2 text-white/80 font-[300]'>
                     <li className='text-lg text-white font-medium mb-2'>Skills used</li>
                     <li className=''>Javascript</li>

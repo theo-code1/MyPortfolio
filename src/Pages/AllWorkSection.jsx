@@ -92,9 +92,9 @@ const AllWorkSection = () => {
 
   return (
     // <section className='bg-black min-h-screen pt-6 pb-12 px-42 flex flex-col gap-16'>
-    <section className='relative bg-black h-auto lg:h-screen max-w-screen flex flex-col gap-8 lg:gap-16 pt-6 px-4 md:px-12 lg:px-36 pb-32 lg:pb-0 '>
+    <section className='relative bg-black h-auto max-w-screen flex flex-col gap-8 lg:gap-16 pt-6  px-4 md:px-12 lg:px-36 pb-32 lg:pb-10 '>
         <ul
-                className={`w-fit mx-auto text-white/90 px-8 py-2 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-white)] border border-white/30 flex items-center gap-4 md:gap-16 text-sm md:text-[16px] font-switzer font-medium `}
+                className={`w-fit mx-auto text-white/90 px-4 py-2 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-white)] border border-white/30 flex items-center gap-4 md:gap-16 text-sm md:text-[16px] font-switzer font-medium `}
               >
                 <Link to={"/"}>
                   <li className="cursor-pointer px-2 py-1 transition-all duration-200">
@@ -127,7 +127,7 @@ const AllWorkSection = () => {
             using <br className="hidden md:flex" /> different technology like React.js and Tailwind CSS
           </h2>
         </div>
-        <div className="filter-bar w-max overflow-x-scroll">
+                <div className="filter-bar overflow-x-auto">
           <FilterBar currentFilter={currentFilter} setCurrentFilter={setCurrentFilter} />
         </div>
 
@@ -160,9 +160,9 @@ export const FilterBar = ({ currentFilter, setCurrentFilter}) => {
   const filterItems = ['All', 'Landing Page', 'Web App', 'Portfolio', 'E-commerce', 'Practice']
 
   return(
-    <ul className='flex items-center gap-3 select-none'>
+        <ul className='flex items-center gap-3 select-none flex-nowrap'>
       {filterItems.map((item, index) => (
-        <li onClick={() => setCurrentFilter(item)} className={`${currentFilter === item ? 'bg-gradient-to-br from-white/40 from-[-40%] to-transparent' : '' } hover:bg-gradient-to-br from-white/20 from-[-40%] to-transparent backdrop-blur-lg text-lg text-white font-switzer font-medium px-4 py-1.5 border border-white/30 rounded-xl cursor-pointer transition-all duration-200 `} key={index}>{item}</li>
+                <li onClick={() => setCurrentFilter(item)} className={`${currentFilter === item ? 'bg-gradient-to-br from-white/40 from-[-40%] to-transparent' : '' } hover:bg-gradient-to-br from-white/20 from-[-40%] to-transparent backdrop-blur-lg text-lg text-white font-switzer font-medium flex px-4 py-1.5 border border-white/30 rounded-xl cursor-pointer transition-all duration-200 whitespace-nowrap`} key={index}>{item}</li>
       ))}
     </ul>
   )
