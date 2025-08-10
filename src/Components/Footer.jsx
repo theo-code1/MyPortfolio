@@ -9,7 +9,7 @@ const Footer = ({ aboutRef, workRef}) => {
     
 
   return (
-    <footer className='relative h-fit md:h-[60dvh] lg:h-[70dvh] bg-black font-switzer flex flex-col items-center px-4 md:px-16 lg:px-48 pt-12 pb-24 md:pt-26 overflow-hidden border-t border-white/20'>
+    <footer className='relative h-fit md:h-[60dvh] lg:h-[80dvh] bg-black font-switzer flex flex-col items-center px-4 md:px-16 lg:px-48 pt-12 pb-24 md:pt-26 overflow-hidden border-t border-white/20'>
         <div className="first-column flex flex-col md:flex-row items-center md:items-start justify-between w-full gap-12 md:gap-auto mb-8 md:mb-16">
             <div className="logo flex flex-col items-center md:items-start gap-2">
                 <img src={Logo} alt="Brand Logo" className='w-32 md:w-36 ' />
@@ -42,7 +42,7 @@ const Footer = ({ aboutRef, workRef}) => {
                 </ul>
             </div>
         </div>
-        <h1 className='text-[5rem] md:text-[10rem] lg:text-[16rem] 2xl:text-[18rem] text-center text-white font-clash-display leading-[80%] absolute bottom-2 left-1/2 -translate-x-1/2'>TheoKode</h1>
+        <h1 className='text-[5rem] md:text-[10rem] lg:text-[12rem] 2xl:text-[18rem] text-center text-white font-clash-display leading-[80%] absolute bottom-2 left-1/2 -translate-x-1/2'>TheoKode</h1>
     </footer>
   )
 }

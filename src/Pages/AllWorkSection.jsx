@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router';
+
 import GlobalIcon from '../assets/Icons/GlobalIcon' 
 import WorkArticle from '../Components/WorkArticle';
 import UivioProject from '../assets/Project03.webp';
@@ -7,6 +8,7 @@ import NestleForgeProject from '../assets/Project02.webp';
 import Project01 from '../assets/Project01.webp';
 import Project04 from '../assets/project04.webp';
 import MyPortfolio from '../assets/MyPortfolio.webp'
+import SeluxPortfolio from '../assets/selux-portfolio.webp'
 
 const AllWorkSection = () => {
 
@@ -17,6 +19,20 @@ const AllWorkSection = () => {
   }, []);
 
   const ProjectsInfo = [
+    {
+      title: 'Selux Portfolio',
+      desc: "A Thumbnail Designer Portfolio designed to boost YouTube creators’ engagement with custom thumbnails. Featuring a sleek dark theme, intuitive layout, and interactive elements like a simple ordering process and client testimonials. Built for performance and professional impact, ideal for clients who value quality and results.",
+      features: [
+        'Increased user trust and credibility',
+        'Responsive, accessible, performance',
+        'Increased conversion rates'
+      ],
+      websiteLink: '#',
+      websiteImg: SeluxPortfolio,
+      websiteAlt: 'Selux Portfolio (Thumbnail Designer)',
+      category: 'Portfolio',
+      StatusLabel: 'Working On'
+    },
     {
       title: 'UiVio',
       desc: 'A mobile-first landing page crafted for a clipboard manager app, focused on usability and productivity. It highlights features like clipboard history, cross-device sync, privacy, and smart pasting—using clear visuals, concise copy, and strong calls-to-action. The structure flows seamlessly from benefits to testimonials and pricing, guiding users with intent.',

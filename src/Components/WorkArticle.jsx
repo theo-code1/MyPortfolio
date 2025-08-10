@@ -27,8 +27,8 @@ const WorkArticle = ({
           </div>
         )}
         {Statuslabel && (
-          <div className="flex items-center gap-2 absolute right-4 top-6 md:right-6 md:top-8 lg:left-16 lg:top-8 border border-yellow-200 text-sm px-4 py-1.5 rounded-xl">
-            <div className="dot bg-yellow-200 size-2 rounded-full"></div>
+          <div className={`flex items-center gap-2 w-fit absolute right-4 top-6 md:right-6 md:top-8 lg:left-16 lg:top-8 border ${Statuslabel === 'Coming Soon' ? 'border-yellow-200' : 'border-[#2DD4BF]'} text-sm px-4 py-1.5 rounded-xl`}>
+            <div className={`dot ${Statuslabel === 'Coming Soon' ? 'bg-yellow-200' : 'bg-[#2DD4BF]'} size-2 rounded-full`}></div>
             <span>{Statuslabel}</span>
           </div>
         )}
