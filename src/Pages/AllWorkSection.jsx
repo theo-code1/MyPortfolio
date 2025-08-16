@@ -73,7 +73,7 @@ const AllWorkSection = () => {
       category: 'Web App'
     },
     {
-      title: 'Starbucks Hero Section',
+      title: 'Starbucks Hero',
       desc: "A visually striking hero section featuring a Starbucks Frappuccino against a vibrant green background, with repeated 'Starbucks' text for brand emphasis. It includes smooth navigation, a clear product description, and a bold 'Order Now' call to action—designed to capture attention and drive interaction.",
       features: [
         'Visual Appeal',
@@ -86,7 +86,7 @@ const AllWorkSection = () => {
       category: 'Practice'
     },
     {
-      title: 'Restaurant Website',
+      title: 'Restaurant',
       desc: "A stylish restaurant site combining rich visuals with a refined dining atmosphere. It highlights top dishes, chef-curated menus, and an easy-to-use reservation system. Designed to engage food lovers, the experience is smooth, responsive, and tailored for both desktop and mobile users.",
       features: [
         'Interactive Menu',
