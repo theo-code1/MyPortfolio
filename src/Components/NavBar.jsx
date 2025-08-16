@@ -86,9 +86,8 @@ export const PhoneMenu = ({ overviewRef, aboutRef, workRef, isPhoneMenuOpened, s
   
 
   return(
-    // {isPhoneMenuOpened && (
     <div className={`fixed top-0 left-0 w-full h-screen bg-white z-50 flex flex-col items-center justify-center gap-8 md:hidden ${isPhoneMenuOpened ? 'translate-x-0' : 'translate-x-full'} transition-all duration-300`}>
-        <div className='absolute top-6 right-'>
+        <div className='absolute top-7 right-4'>
         <Close onClick={() => setIsPhoneMenuOpened(false)} className='text-4xl rounded-2xl active:bg-gray-100 ' />
       </div>
 
