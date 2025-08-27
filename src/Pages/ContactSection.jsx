@@ -101,16 +101,16 @@ const Contact = () => {
             <br className="hidden md:flex"/> the form on the side—let's start the conversation.
           </p>
           <div className="social-media flex order-5 items-center gap-8 text-3xl absolute bottom-12 md:bottom-14 left-1/2 -translate-x-1/2 lg:relative lg:top-0 lg:left-0 lg:translate-x-0 z-10">
-            <a href="https://x.com/TheoKode_?t=Aeyn9E65s60T6on178qkMg&s=08" target="_blank">
+            <a href="https://x.com/TheoKode_?t=Aeyn9E65s60T6on178qkMg&s=08" target="_blank" className="lg:hover:bg-white/10 p-2 rounded-full transition-all duration-200">
               <FaXTwitter />
             </a>
-            <a href="https://www.linkedin.com/in/theo-kode-0b35a632a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank">
+            <a href="https://www.linkedin.com/in/theo-kode-0b35a632a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank" className="lg:hover:bg-white/10 p-2 rounded-full transition-all duration-200 ">
               <FaLinkedinIn />
             </a>
-            <a href="mailto:theokode01@gmail.com" target="_blank">
+            <a href="mailto:theokode01@gmail.com" target="_blank" className="lg:hover:bg-white/10 p-2 rounded-full transition-all duration-200 ">
               <Mail />
             </a>
-            <a href="https://www.threads.com/@theokode" target="_blank">
+            <a href="https://www.threads.com/@theokode" target="_blank" className="lg:hover:bg-white/10 p-2 rounded-full transition-all duration-200 ">
               <FaThreads />
             </a>
           </div>
