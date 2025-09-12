@@ -72,7 +72,7 @@ function App() {
           }
         />
         <Route path="/contact" element={<ContactSection />} />
-        <Route path="/my-work" element={<AllWorkSection />} />
+        <Route path="/work" element={<AllWorkSection />} />
       </Routes>
     </BrowserRouter>
   );
