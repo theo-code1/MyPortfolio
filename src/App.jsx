@@ -8,7 +8,7 @@ import OfferSection from './Components/OfferSection';
 import WorkSection from './Components/WorkSection';
 import AllWorkSection from './Pages/AllWorkSection';
 import ContactSection from './Pages/ContactSection';
-import TestimonialSection from './Components/TestimonialSection';
+// import TestimonialSection from './Components/TestimonialSection';
 import Footer from './Components/Footer';
 import MyLogoLight from './assets/MyLogoLight.svg'
 import MyLogo from './assets/MyLogo.svg'
@@ -24,7 +24,6 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   
   useEffect(() => {
-    // Function to update the favicon based on theme
     const updateFavicon = (isDark) => {
       const favicon = document.getElementById('favicon');
       if (isDark) {
@@ -34,25 +33,19 @@ function App() {
       }
     };
 
-    // Check initial theme
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     setIsDarkMode(darkModeMediaQuery.matches);
     updateFavicon(darkModeMediaQuery.matches);
 
-    // Listen for theme changes
     const handleChange = (e) => {
       setIsDarkMode(e.matches);
       updateFavicon(e.matches);
     };
-
-    // Add listener
     darkModeMediaQuery.addListener(handleChange);
 
-    // Cleanup
     return () => darkModeMediaQuery.removeListener(handleChange);
   }, []);
 
-  // Rest of your component...
 
 
   return (
