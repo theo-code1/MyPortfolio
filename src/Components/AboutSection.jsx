@@ -115,7 +115,7 @@ const AboutSection = ({ aboutRef }) => {
               <RightArrow className="text-xl group-hover:translate-x-2 transition-all duration-200" />
             </Link>
             <Link
-              to={"/my-work"}
+              to={"/work"}
               className="text-[16px] md:text-lg border border-black/40 px-4 md:px-8 py-3 md:py-4 rounded-lg hover:shadow-[0_2px_20px_0_var(--color-shadow-black)] transition-all duration-200 cursor-pointer "
             >
               View Portfolio

@@ -58,7 +58,7 @@ const Contact = () => {
   
 
   return (
-    <section className="relative bg-black h-auto lg:h-screen max-w-screen flex flex-col gap-8 lg:gap-16 pt-6 px-4 md:px-12 lg:px-36 pb-32 lg:pb-0 ">
+    <section className="relative bg-black h-auto md:min-h-screen max-w-screen flex flex-col gap-8 lg:gap-16 pt-6 px-4 md:px-12 lg:px-36 pb-32 lg:pb-0 ">
       <ul
         className={`w-fit mx-auto text-white/90 px-4 py-2 rounded-full shadow-[0_3px_10px_0_var(--color-shadow-white)] border border-white/30 flex items-center gap-4 md:gap-16 text-sm md:text-[16px] font-switzer font-medium `}
       >
@@ -107,7 +107,7 @@ const Contact = () => {
             <a href="https://www.linkedin.com/in/theo-kode-0b35a632a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank" className="lg:hover:bg-white/10 p-2 rounded-full transition-all duration-200 ">
               <FaLinkedinIn />
             </a>
-            <a href="mailto:theokode01@gmail.com" target="_blank" className="lg:hover:bg-white/10 p-2 rounded-full transition-all duration-200 ">
+            <a href="mailto:theokode01@gmail.com" className="lg:hover:bg-white/10 p-2 rounded-full transition-all duration-200" target="_blank" rel="noopener noreferrer">
               <Mail />
             </a>
             <a href="https://www.threads.com/@theokode" target="_blank" className="lg:hover:bg-white/10 p-2 rounded-full transition-all duration-200 ">
@@ -117,21 +117,21 @@ const Contact = () => {
         </div>
 
 
-        <div className="form-content w-full lg:w-1/2 pl-0 lg:pl-24 order-4 ">
-          <form
+        <div className="form-content w-full lg:w-1/2 pl-0 lg:pl-12 order-4">
+          <form 
             onSubmit={handleSubmit}
-            className="bg-white/10 flex flex-col gap-4 md:gap-8 border border-white/40 rounded-2xl px-4 md:px-8 pt-6 md:pt-10 pb-8 md:pb-12"
+            className="bg-white/10 flex flex-col gap-4 md:gap-8 border border-white/40 rounded-2xl px-4 md:px-8 pt-6 md:pt-10 pb-8 md:pb-10"
           >
             <div className="name-email flex flex-col md:flex-row gap-4 w-full">
               <div className="name-field flex flex-col gap-3 text-white/90 w-full">
                 <label htmlFor="name" className="text-[16px]">
-                  Name *
+                  Name <span className="text-red-400">*</span>
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full bg-white/5 px-4 py-4 text-lg rounded-lg border-2 border-white/40 placeholder:text-[#A3A3A5] placeholder:text-[16px] "
+                  className="w-full bg-white/5 px-4 py-3 text-lg rounded-lg border-2 border-white/40 placeholder:text-[#A3A3A5] placeholder:text-[16px] "
                   placeholder="Enter full name"
                   onChange={handleChange}
                   value={formData.name}
@@ -141,13 +141,13 @@ const Contact = () => {
 
               <div className="name-field flex flex-col gap-3 text-white/90 w-full">
                 <label htmlFor="email" className="text-[16px]">
-                  Email *
+                  Email <span className="text-red-400">*</span>
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full bg-white/5 px-4 py-4 text-lg rounded-lg border-2 border-white/40 placeholder:text-[#A3A3A5] placeholder:text-[16px] "
+                  className="w-full bg-white/5 px-4 py-3 text-lg rounded-lg border-2 border-white/40 placeholder:text-[#A3A3A5] placeholder:text-[16px] "
                   placeholder="Enter email"
                   onChange={handleChange}
                   value={formData.email}
@@ -158,13 +158,13 @@ const Contact = () => {
 
             <div className="subject flex flex-col gap-3 text-white/90 w-full">
               <label htmlFor="subject" className="text-[16px]">
-                Subject *
+                Subject <span className="text-red-400">*</span>
               </label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
-                className="w-full bg-white/5 px-4 py-4 text-lg rounded-lg border-2 border-white/40 placeholder:text-[#A3A3A5] placeholder:text-[16px] "
+                className="w-full bg-white/5 px-4 py-3 text-lg rounded-lg border-2 border-white/40 placeholder:text-[#A3A3A5] placeholder:text-[16px] "
                 placeholder="e.g. Portfolio, E-commerce..."
                 onChange={handleChange}
                 value={formData.subject}
@@ -174,13 +174,13 @@ const Contact = () => {
 
             <div className="subject flex flex-col gap-3 text-white/90 ">
               <label htmlFor="message" className="text-[16px]">
-                Message *
+                Message <span className="text-red-400">*</span>
               </label>
               <textarea
                 name="message"
                 id="message"
-                className="w-full h-40 resize-none bg-white/5 px-4 py-4 text-lg rounded-lg border-2 border-white/40 placeholder:text-[#A3A3A5] placeholder:text-[16px]"
-                placeholder="how can i help you?"
+                className="w-full h-32 resize-none bg-white/5 px-4 py-3 text-lg rounded-lg border-2 border-white/40 placeholder:text-[#A3A3A5] placeholder:text-[16px]"
+                placeholder="What would you like to discuss?"
                 onChange={handleChange}
                 value={formData.message}
                 required
@@ -210,7 +210,7 @@ const Contact = () => {
                     Message Sent !
                   </p>
                 </div>
-                <Close />
+                <Close className='cursor-pointer' />
             </div>
           )}
 

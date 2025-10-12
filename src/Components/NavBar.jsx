@@ -19,9 +19,9 @@ const NavBar = ({ overviewRef, aboutRef, workRef }) => {
   const [isPhoneMenuOpened, setIsPhoneMenuOpened] = useState(false)
   const [isMobile, setIsMobile] = useState(false);
   
-    // Function to check screen size
+    //------ Function to check screen size ------//
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 768 ? true : false);
     };
   
     useEffect(() => {
@@ -45,7 +45,6 @@ const NavBar = ({ overviewRef, aboutRef, workRef }) => {
     } else {
       document.body.style.overflow = '';
     }
-    // Clean up in case component unmounts while menu is open
     return () => {
       document.body.style.overflow = '';
     };
@@ -69,7 +68,7 @@ const NavBar = ({ overviewRef, aboutRef, workRef }) => {
             <Link to={'/contact'} ><li className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Contact</li></Link>
         </ul>
 
-        <Link to={'/contact'} className={`hidden md:flex bg-primary-blue brightness-105 hover:brightness-95 shadow-[0_4px_10px_0_var(--color-shadow-black)] hover:shadow-[0_2px_10px_0_var(--color-shadow-black-02)] transition-all duration-200 px-4 lg:px-8 py-3 rounded-xl text-[16px] text-white font-switzer font-medium cursor-pointer ${isScrolled ? 'md:hidden' : 'flex'}`}>Let's Connect</Link>
+        <Link to={'/contact'} className={`hidden md:flex bg-primary-blue brightness-105 hover:brightness-95 shadow-[0_4px_10px_0_var(--color-shadow-black)] hover:shadow-[0_2px_10px_0_var(--color-shadow-black-02)] hover:scale-95 transition-all duration-200 px-4 lg:px-8 py-3 rounded-xl text-[16px] text-white font-switzer font-medium cursor-pointer ${isScrolled ? 'md:hidden' : 'flex'}`}>Let's Connect</Link>
         
         <Menu onClick={() => setIsPhoneMenuOpened(!isPhoneMenuOpened)} className='flex md:hidden text-4xl ' />
 
@@ -86,12 +85,12 @@ export const PhoneMenu = ({ overviewRef, aboutRef, workRef, isPhoneMenuOpened, s
   
 
   return(
-    <div className={`fixed top-0 left-0 w-full h-screen bg-white z-50 flex flex-col items-center justify-center gap-8 md:hidden ${isPhoneMenuOpened ? 'translate-x-0' : 'translate-x-full'} transition-all duration-300`}>
+    <div className={`absolute top-0 left-0 w-full h-screen bg-white z-50 flex flex-col items-center justify-center gap-8 md:hidden ${isPhoneMenuOpened ? 'translate-x-0' : 'translate-x-full'} transition-all duration-300`}>
         <div className='absolute top-7 right-4'>
-        <Close onClick={() => setIsPhoneMenuOpened(false)} className='text-4xl rounded-2xl active:bg-gray-100 ' />
+        <Close onClick={() => setIsPhoneMenuOpened(false)} className='text-3xl rounded-2xl active:bg-gray-100 ' />
       </div>
 
-      <ul className={`flex flex-col items-center gap-4 mx-auto w-full text-xl font-switzer font-medium px-8 py-2 `}>
+      <ul className={`flex flex-col items-center gap-4 mx-auto w-full text-xl font-switzer font-medium px-8 py-2`}>
             <li onClick={() => {
               scrollToSection(overviewRef)
               setIsPhoneMenuOpened(false)
@@ -113,6 +112,5 @@ export const PhoneMenu = ({ overviewRef, aboutRef, workRef, isPhoneMenuOpened, s
         <Link to={'/contact'} className={`flex md:hidden w-fit bg-primary-blue brightness-105 active:brightness-95 shadow-[0_4px_10px_0_var(--color-shadow-black)] active:shadow-[0_2px_10px_0_var(--color-shadow-black-02)] transition-all duration-200 px-8 py-3 rounded-xl text-lg text-white font-switzer font-medium `}>Let's Connect</Link>
 
     </div>
-  // )}
   )
 }
