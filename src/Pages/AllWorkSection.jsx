@@ -20,7 +20,7 @@ const AllWorkSection = () => {
   const ProjectsInfo = [
     {
       title: "Selux Portfolio",
-      desc: "A Thumbnail Designer Portfolio designed to boost YouTube creators’ engagement with custom thumbnails. Featuring a sleek dark theme, intuitive layout, and interactive elements like a simple ordering process and client testimonials. Built for performance and professional impact, ideal for clients who value quality and results.",
+      desc: "A dark-themed thumbnail designer portfolio built to engage YouTube creators with custom thumbnails, an easy ordering process, and client testimonials for a professional, high-impact look.",
       features: [
         "Increased user trust and credibility",
         "Responsive, accessible, performance",
@@ -34,7 +34,7 @@ const AllWorkSection = () => {
     },
     {
       title: "UiVio",
-      desc: "A mobile-first landing page crafted for a clipboard manager app, focused on usability and productivity. It highlights features like clipboard history, cross-device sync, privacy, and smart pasting—using clear visuals, concise copy, and strong calls-to-action. The structure flows seamlessly from benefits to testimonials and pricing, guiding users with intent.",
+      desc: "A mobile-first landing page for a clipboard manager app, highlighting features like history, sync, and privacy with clean visuals, short copy, and clear calls-to-action that guide users from benefits to pricing.",
       features: [
         "Modern, clean design",
         "Optimized React development",
@@ -46,8 +46,7 @@ const AllWorkSection = () => {
       category: "Landing Page",
     },
     {
-      title: "My Portfolio",
-      desc: "A clean and modern developer portfolio showcasing creative web solutions with precision and style. Crafted to reflect clarity, performance, and professional impact. Built for clients, collaborators, and opportunities that value quality work.",
+      title: "A modern developer portfolio showcasing creative web solutions with clarity, performance, and professionalism for clients and collaborators who value quality.",
       features: [
         "Interactive Showcase",
         "Clean UI Design",
@@ -60,7 +59,7 @@ const AllWorkSection = () => {
     },
     {
       title: "NestleForge",
-      desc: "I developed this web app from scratch, delivering a powerful suite of image tools. The interface is clean, intuitive, and built for effortless user interaction. Focused on performance and scalability, the platform ensures fast processing, smooth navigation, and reliable functionality across all devices.",
+      desc: "A web app built from scratch with powerful image tools, a clean and intuitive interface, and fast, reliable performance across all devices.",
       features: [
         "Image Converter&Compressor",
         "Background Remover",
@@ -73,7 +72,7 @@ const AllWorkSection = () => {
     },
     {
       title: "Starbucks Hero",
-      desc: "A visually striking hero section featuring a Starbucks Frappuccino against a vibrant green background, with repeated 'Starbucks' text for brand emphasis. It includes smooth navigation, a clear product description, and a bold 'Order Now' call to action—designed to capture attention and drive interaction.",
+      desc: "A bold hero section showcasing a Starbucks Frappuccino on a vibrant green background, with repeated branding, smooth navigation, and a clear call to action to boost engagement.",
       features: ["Visual Appeal", "Branding", "Engagement"],
       websiteLink: "https://starbucks-product.vercel.app/",
       websiteImg: Project01,
@@ -82,7 +81,7 @@ const AllWorkSection = () => {
     },
     {
       title: "Restaurant",
-      desc: "A stylish restaurant site combining rich visuals with a refined dining atmosphere. It highlights top dishes, chef-curated menus, and an easy-to-use reservation system. Designed to engage food lovers, the experience is smooth, responsive, and tailored for both desktop and mobile users.",
+      desc: "A stylish restaurant website with rich visuals, chef-curated menus, and an easy reservation system, offering a smooth, responsive experience for all users.",
       features: [
         "Interactive Menu",
         "Online Reservations",
@@ -96,7 +95,7 @@ const AllWorkSection = () => {
     },
   ];
 
-  // Filter projects based on current filter
+  //------ Filter projects based on current filter ------\\
   const filteredProjects =
     currentFilter === "All"
       ? ProjectsInfo
@@ -135,7 +134,7 @@ const AllWorkSection = () => {
             Work
           </h1>
         </div>
-        <h2 className="text-[16px] text-white/90 font-medium">
+        <h2 className="text-lg text-white/90 font-normal">
           Developed sleek, visually stunning and high-performance websites using{" "}
           <br className="hidden md:flex" /> different technology like React.js
           and Tailwind CSS
