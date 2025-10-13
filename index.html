@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <link id="favicon" rel="icon" href="%PUBLIC_URL%/light-favicon.ico" />
@@ -21,22 +22,36 @@
     <link rel="preload" as="image" href="/src/assets/Project03.webp" />
     <link rel="preload" as="image" href="/src/assets/MyLogo.webp" />
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Theo Kode",
-        "url": "https://my-portfolio-nu-navy-15.vercel.app/",
-        "sameAs": [
-          "https://github.com/theo-code1",
-          "https://www.linkedin.com/in/theo-kode-0b35a632a"
-        ],
-        "jobTitle": "Front-End Developer",
-        "knowsAbout": ["React", "Tailwind CSS", "JavaScript", "HTML", "CSS"]
-      }
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Theo Kode",
+            "url": "https://my-portfolio-nu-navy-15.vercel.app/",
+            "sameAs": [
+                "https://github.com/theo-code1",
+                "https://www.linkedin.com/in/theo-kode-0b35a632a"
+            ],
+            "jobTitle": "Front-End Developer",
+            "knowsAbout": ["React", "Tailwind CSS", "JavaScript", "HTML", "CSS"]
+        }
     </script>
-  </head>
-  <body>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JTRMYRVP6N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JTRMYRVP6N');
+    </script>
+</head>
+
+<body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-  </body>
+</body>
+
 </html>
