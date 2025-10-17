@@ -1,5 +1,5 @@
 import MyLogo from '../assets/MyLogo.webp'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import useScrollDirection from './hook/UseScrollDirection';
 import { Link } from 'react-router';
 
@@ -18,6 +18,7 @@ const NavBar = ({ overviewRef, aboutRef, workRef }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isPhoneMenuOpened, setIsPhoneMenuOpened] = useState(false)
   const [isMobile, setIsMobile] = useState(false);
+  const savedScrollY = useRef(0);
   
     //------ Function to check screen size ------//
     const checkScreenSize = () => {
@@ -40,13 +41,35 @@ const NavBar = ({ overviewRef, aboutRef, workRef }) => {
   }, []);
 
   useEffect(() => {
+    // When the phone menu opens, lock the body scroll and preserve position.
     if (isPhoneMenuOpened) {
+      savedScrollY.current = window.scrollY || window.pageYOffset || 0;
+
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${savedScrollY.current}px`;
+      document.body.style.left = '0';
+      document.body.style.right = '0';
       document.body.style.overflow = 'hidden';
+      document.body.style.width = '100%';
     } else {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
       document.body.style.overflow = '';
+      document.body.style.width = '';
+
+      const y = savedScrollY.current;
+      if (typeof y === 'number') window.scrollTo(0, y);
     }
+
     return () => {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
       document.body.style.overflow = '';
+      document.body.style.width = '';
     };
   }, [isPhoneMenuOpened]);
 
@@ -85,28 +108,28 @@ export const PhoneMenu = ({ overviewRef, aboutRef, workRef, isPhoneMenuOpened, s
   
 
   return(
-    <div className={`absolute top-0 left-0 w-full h-screen bg-white z-50 flex flex-col items-center justify-center gap-8 md:hidden ${isPhoneMenuOpened ? 'translate-x-0' : 'translate-x-full'} transition-all duration-300`}>
-        <div className='absolute top-7 right-4'>
+    <div className={`absolute top-0 left-0 w-full h-screen bg-white z-50 flex flex-col items-center pt-32 gap-16 md:hidden ${isPhoneMenuOpened ? 'translate-x-0' : 'translate-x-full'} transition-all duration-300`}>
+        <div className='absolute top-8 right-7'>
         <Close onClick={() => setIsPhoneMenuOpened(false)} className='text-3xl rounded-2xl active:bg-gray-100 ' />
       </div>
 
-      <ul className={`flex flex-col items-center gap-4 mx-auto w-full text-xl font-switzer font-medium px-8 py-2`}>
+      <ul className={`flex flex-col items-center gap-3 mx-auto w-full text-xl font-switzer font-medium px-8 py-2`}>
             <li onClick={() => {
               scrollToSection(overviewRef)
               setIsPhoneMenuOpened(false)
-            }}  className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Overview</li>
+            }}  className='cursor-pointer text-black hover:text-dark-blue/90 px-4 py-2 transition-all duration-200'>Overview</li>
             <hr className='w-1/2 text-black/30 ' />
             <li onClick={() => {
               scrollToSection(aboutRef)
               setIsPhoneMenuOpened(false)
-            }}  className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>About</li>
+            }}  className='cursor-pointer text-black hover:text-dark-blue/90 px-4 py-2 transition-all duration-200'>About</li>
             <hr className='w-1/2 text-black/30 ' />
             <li onClick={() => {
               scrollToSection(workRef)
               setIsPhoneMenuOpened(false)
-            }}  className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Work</li>
+            }}  className='cursor-pointer text-black hover:text-dark-blue/90 px-4 py-2 transition-all duration-200'>Work</li>
             <hr className='w-1/2 text-black/30 ' />
-            <Link to={'/contact'} ><li onClick={() => setIsPhoneMenuOpened(false)} className='cursor-pointer text-black hover:text-dark-blue/90 px-2 py-1 transition-all duration-200'>Contact</li></Link>
+            <Link to={'/contact'} ><li onClick={() => setIsPhoneMenuOpened(false)} className='cursor-pointer text-black hover:text-dark-blue/90 px-4 py-2 transition-all duration-200'>Contact</li></Link>
         </ul>
 
         <Link to={'/contact'} className={`flex md:hidden w-fit bg-primary-blue brightness-105 active:brightness-95 shadow-[0_4px_10px_0_var(--color-shadow-black)] active:shadow-[0_2px_10px_0_var(--color-shadow-black-02)] transition-all duration-200 px-8 py-3 rounded-xl text-lg text-white font-switzer font-medium `}>Let's Connect</Link>
