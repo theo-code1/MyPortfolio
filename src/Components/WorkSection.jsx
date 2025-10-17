@@ -1,5 +1,4 @@
 import React from "react";
-// import { motion } from "motion/react";
 import GlobalIcon from "../assets/Icons/GlobalIcon";
 import WorkArticle from "./WorkArticle";
 import UivioProject from "../assets/Project03.webp";
@@ -11,7 +10,7 @@ const WorkSection = ({ workRef }) => {
   const websitesInfo = [
     {
       role: "UiVio",
-      desc: "This landing page features a sleek, mobile-first clipboard manager app focused on usability and productivity, showcasing clipboard history, cross-device sync, privacy, and smart pasting through clear visuals, concise headings, and strong CTAs that guide users from benefits to testimonials and pricing.",
+      desc: "A mobile-first landing page for a clipboard manager app, highlighting features like history, sync, and privacy with clean visuals, short copy, and clear calls-to-action that guide users from benefits to pricing.",
       features: [
         "Modern, clean design",
         "Optimized React development",
@@ -23,7 +22,7 @@ const WorkSection = ({ workRef }) => {
     },
     {
       role: "NestleForge",
-      desc: "I developed this website from Scratch, delivering a suite of powerful image tools. The interface is clean, intuitive, and user-focused—ensuring smooth navigation across features. Built with performance and scalability in mind, the entire experience is optimized for speed, responsiveness, and seamless functionality.",
+      desc: "A web app built from scratch with powerful image tools, a clean and intuitive interface, and fast, reliable performance across all devices.",
       features: [
         "Image Converter",
         "Image Compressor",
